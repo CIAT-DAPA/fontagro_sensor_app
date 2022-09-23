@@ -1,0 +1,37 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 91.3vh;
+    margin: 0 auto;
+    background-image: url('../images/background-data-user.jpg');
+    background-size: cover;
+}
+.btn-aceptar{
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    color: black;
+    width: 106px;
+    align-self: center;
+}
+label{
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    color:white ;
+}
+.nombre{
+    margin-bottom: 30px;
+}
+.text-form{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
