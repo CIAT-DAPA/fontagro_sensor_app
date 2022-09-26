@@ -1,27 +1,28 @@
 import '../assets/styles/header.css'
+import {Link} from "react-router-dom"
 function Header() {
   return (
 
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="./">
         <img src={require('../assets/images/logo-fontagro1.png')}  />
-      </a>
+      </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="#">Inicio <span className="sr-only"></span></a>
+            <Link className="nav-link" to="/">Inicio <span className="sr-only"></span></Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Carga datos sensor</a>
+            <Link className="nav-link" to="/data">Carga datos sensor</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Datos Personales</a>
+            <Link className="nav-link" to="/personaldata">Datos Personales</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Visualización</a>
+            <Link className="nav-link" href="#">Visualización</Link>
           </li>  
         </ul>
       </div>

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 91.3vh;
+    height: 100vh;
     margin: 0 auto;
     background-image: url('../images/background-home.jpg');
     background-repeat: no-repeat;
@@ -23,11 +23,16 @@
     color:  white;
     font-weight: bold;
 }
-.next-button-home{
+.btn-load-data{
    padding: 10px 20px;
    border-radius: 5px;
    border: none;
    background-color: white;
    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
    cursor: pointer;
+}
+.btn-load-data a{
+    text-decoration: none;
+    color: black;
+    
 }

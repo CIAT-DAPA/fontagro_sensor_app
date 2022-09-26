@@ -1,0 +1,63 @@
+.btn-cargar {
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    color: black;
+    width: 106px;
+    align-self: center;
+    justify-self: center;  
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.nombre{
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.form-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 95vh;
+    margin: 0 auto;
+    background-image: url('../images/background-data-user.jpg');
+    background-size: cover;
+}
+.text-form{
+    margin-bottom: 50px;
+    font-size: 25px;
+    text-align: center;
+    color:  white;
+    font-weight: bold;
+}
+.btn-aceptar{
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    color: black;
+    width: 106px;
+    align-self: center;
+    justify-self: center;  
+}
+label{
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    color:white ;
+}
+.btn-aceptar a{
+    text-decoration: none;
+    color: black;
+    
+}
