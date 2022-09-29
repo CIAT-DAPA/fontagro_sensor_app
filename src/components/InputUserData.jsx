@@ -2,10 +2,7 @@ import React from "react";
 import '../assets/styles/InputUserData.css'
 function PersonalData(){
 
-    /* const logValue=()=>{
-        const valeOption= document.querySelector('.suelo').value;
-        console.log(valeOption)
-    } */
+    
     return(
         
         <div className="form">
@@ -19,7 +16,7 @@ function PersonalData(){
                 <option className="suelo" value={'6'}>Arsillo Arenosa</option>
                 <option className="suelo" value={'7'}>Arcillosa</option>
                 </select>
-                <button onClick={logValue} className="btn-aceptar">Aceptar</button>
+                <button  className="btn-aceptar">Aceptar</button>
         </div>   
     )
 
