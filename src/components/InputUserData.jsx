@@ -1,23 +1,26 @@
 import React from "react";
 import '../assets/styles/InputUserData.css'
 function PersonalData(){
+
+    /* const logValue=()=>{
+        const valeOption= document.querySelector('.suelo').value;
+        console.log(valeOption)
+    } */
     return(
         
-        <form>
-            <p className="text-form">Por favor ingresa tu nombre,el nombre de tu finca y presiona aceptar</p>
-            <div className="form-row">
-                <div className="nombre">
-                    <label htmlFor="inputNobre">Nombre</label>
-                    <input type="email" className="form-control" id="inputEmail4" placeholder="Su nombre aqui"/>
-                </div>
-            <div className="finca">
-                <label htmlFor="inputFinca">Nombre de la finca</label>
-                <input type="text" className="form-control" id="inputPassword4" placeholder="Nombre de su finca"/>
-            </div>
-            </div>
-            <button  className="btn-aceptar">Aceptar</button>
-      </form>
-      
+        <div className="form">
+            <p className="text-form">Seleccione su tipo de campo</p>
+            <select className="selectpicker" data-live-search="true">
+                <option className="suelo"  value={'1'}>Arenoso</option>
+                <option className="suelo" value={'2'}>Franco Arcilloso</option>
+                <option className="suelo" value={'3'}>Franca</option>
+                <option className="suelo" value={'4'}>Franco Arcilloso</option>
+                <option className="suelo" value={'5'}>Franco Arcillo Arenoso</option>
+                <option className="suelo" value={'6'}>Arsillo Arenosa</option>
+                <option className="suelo" value={'7'}>Arcillosa</option>
+                </select>
+                <button onClick={logValue} className="btn-aceptar">Aceptar</button>
+        </div>   
     )
 
 }

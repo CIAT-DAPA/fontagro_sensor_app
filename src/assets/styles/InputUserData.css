@@ -1,4 +1,4 @@
-form{
+.form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,9 +29,7 @@ label{
 .nombre{
     margin-bottom: 30px;
 }
-.text-form{
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
+.selectpicker{
+    height: 40px;
+    border-radius: 5px;
 }
