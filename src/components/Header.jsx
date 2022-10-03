@@ -19,10 +19,10 @@ function Header() {
             <Link className="nav-link" to="/data">Carga datos sensor</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/personaldata">Datos Personales</Link>
+            <Link className="nav-link" to="/personaldata">Datos de suelo</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" href="#">Visualización</Link>
+            <Link className="nav-link" to="/visualization">Visualización</Link>
           </li>  
         </ul>
       </div>

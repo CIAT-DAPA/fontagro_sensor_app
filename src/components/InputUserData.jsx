@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../assets/styles/InputUserData.css'
-function PersonalData(){
 
     
+function ShowPlots(){
+    
+    
     return(
+        
         
         <div className="form">
             <p className="text-form">Seleccione su tipo de campo</p>
@@ -16,9 +20,11 @@ function PersonalData(){
                 <option className="suelo" value={'6'}>Arsillo Arenosa</option>
                 <option className="suelo" value={'7'}>Arcillosa</option>
                 </select>
-                <button  className="btn-aceptar">Aceptar</button>
+                <button className="btns btn-aceptar" ><Link to="/visualization">Continuar</Link></button>
+                
+
         </div>   
     )
 
 }
-export default PersonalData
+export default ShowPlots

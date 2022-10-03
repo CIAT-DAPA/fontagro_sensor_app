@@ -7,6 +7,7 @@
     cursor: pointer;
     color: black;
     width: 106px;
+    height: 44px;
     align-self: center;
     justify-self: center;  
 }
@@ -48,7 +49,8 @@
     color: black;
     width: 106px;
     align-self: center;
-    justify-self: center;  
+    justify-self: center; 
+    
 }
 label{
     display: inline;
