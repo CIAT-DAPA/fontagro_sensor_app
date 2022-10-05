@@ -1,17 +1,21 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import '../assets/styles/InputUserData.css'
 
     
 function ShowPlots(){
-    
-    
+
+    const [value, setValue] = useState('');
+    const mostrarValue=()=>{
+        const selectForm= document.getElementById('select'); //getting  values of the select
+        setValue(selectForm.value);
+        console.log(value)     
+    }
     return(
-        
         
         <div className="form">
             <p className="text-form">Seleccione su tipo de campo</p>
-            <select className="selectpicker" data-live-search="true">
+            <select id ="select" className="selectpicker" data-live-search="true">
                 <option className="suelo"  value={'1'}>Arenoso</option>
                 <option className="suelo" value={'2'}>Franco Arcilloso</option>
                 <option className="suelo" value={'3'}>Franca</option>
@@ -19,10 +23,8 @@ function ShowPlots(){
                 <option className="suelo" value={'5'}>Franco Arcillo Arenoso</option>
                 <option className="suelo" value={'6'}>Arsillo Arenosa</option>
                 <option className="suelo" value={'7'}>Arcillosa</option>
-                </select>
-                <button className="btns btn-aceptar" ><Link to="/visualization">Continuar</Link></button>
-                
-
+            </select>
+            <button onClick={mostrarValue} className="btns btn-aceptar" ><Link to="/visualization">Continuar</Link></button>
         </div>   
     )
 

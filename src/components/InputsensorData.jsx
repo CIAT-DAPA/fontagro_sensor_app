@@ -16,11 +16,9 @@ function LoadData(){
             fileReader.onload = function (event) {
                 const csvOutput = event.target.result;
                 localStorage.setItem('csvOutput',csvOutput)
-                console.log(csvOutput)
-                
+                console.log(csvOutput)    
             };
-
-            fileReader.readAsText(file);
+            fileReader.readAsText(file);       
         }
         
     }
@@ -32,15 +30,13 @@ function LoadData(){
             <p className="text-form">Por favor carga los datos de tu sensor de humedad presionando Seleccionar archivo</p>
             <div className="form-row"/>
                 <div className="nombre">
-                    <label htmlFor="inputData">Datos el sensor en formto CSV</label>
+                    <label className="label-sensor" htmlFor="inputData">Datos el sensor en formato CSV</label>
                     <input type="file" className="form-control" id="inputdata" accept=".csv" onChange={handleChange}/>     
                 </div>
                 <div className="buttons-container">
-                <button  className="btns btn-cargar fa fa-upload" onClick={submitHandler}>Cargar</button>
-                <button  className="btns btn-aceptar fa fa-upload"><Link to="/personaldata">Continuar</Link></button>
-                </div>
-                
-            
+                    <button  className="btns btn-cargar fa fa-upload" onClick={submitHandler}>Cargar</button>
+                    <button  className="btns btn-aceptar fa fa-upload"><Link to="/personaldata">Continuar</Link></button>
+                </div>     
         </form>
     );
 }
