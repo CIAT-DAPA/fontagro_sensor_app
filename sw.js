@@ -1,4 +1,4 @@
-let cacheData="cacheData1";
+/* let cacheData="cacheData1";
 this.addEventListener('install',(event)=>{
     event.waitUntil(
         caches.open(cacheData).then((cache)=>{
@@ -6,10 +6,10 @@ this.addEventListener('install',(event)=>{
                 './',
                 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
                 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
-                './data',
+                '/data',
                 './favicon.ico',
-                './logo192.png',
-                './manifest.json',
+                '/logo192.png',
+                '/manifest.json',
                 '/personaldata',
                 '/visualization',
                 '/static/js/bundle.js',
@@ -35,4 +35,4 @@ this.addEventListener('fetch',(event)=>{
             }
         })
     )
-})
+}) */
