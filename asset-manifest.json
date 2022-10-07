@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/fontagro_sensor_app/static/css/main.0b623fe5.css",
-    "main.js": "/fontagro_sensor_app/static/js/main.7f31531d.js",
+    "main.js": "/fontagro_sensor_app/static/js/main.085cc0ba.js",
     "static/media/background-home.jpg": "/fontagro_sensor_app/static/media/background-home.8e1b3c8572e5a46c114f.jpg",
     "static/media/background-data-user.jpg": "/fontagro_sensor_app/static/media/background-data-user.dba68cb1ca080ea9860a.jpg",
     "static/media/logo-fontagro1.png": "/fontagro_sensor_app/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
     "index.html": "/fontagro_sensor_app/index.html",
     "main.0b623fe5.css.map": "/fontagro_sensor_app/static/css/main.0b623fe5.css.map",
-    "main.7f31531d.js.map": "/fontagro_sensor_app/static/js/main.7f31531d.js.map"
+    "main.085cc0ba.js.map": "/fontagro_sensor_app/static/js/main.085cc0ba.js.map"
   },
   "entrypoints": [
     "static/css/main.0b623fe5.css",
-    "static/js/main.7f31531d.js"
+    "static/js/main.085cc0ba.js"
   ]
 }
