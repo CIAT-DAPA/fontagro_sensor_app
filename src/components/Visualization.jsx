@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import '../assets/styles/visualization.css'
+import * as d3 from 'd3'
 
 import ModalData from "./ModalData";
 import ModalDate from "./ModalDate";
@@ -12,20 +13,15 @@ function LoadDatatwo(){
     const [showw, setShoww] = useState(false);
     const handleClosee = () => setShoww(false);
     const handleShoww = () => setShoww(true);
-    
+    const data= localStorage.getItem('csvOutput')
    
     const prueba=()=>{
-        const data= localStorage.getItem('csvOutput')
-        const dataJson=data.split(',');
-        
-        console.log(typeof(dataJson))
-        console.log(dataJson)
+        console.log(data)
     }
-    
     return(
         <>
         <div className="plots-container">
-            <p>Graficas aqui</p>
+            <p>graficas aqui</p>
             <div className="button-container">
                 <button onClick={handleShoww}  className="btns btn-cargar fa fa-calendar"> Fechas</button>
                 <button onClick={handleShow}  className="btns btn-cargar fa fa-user"> Datos</button>

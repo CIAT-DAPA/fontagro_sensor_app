@@ -1,9 +1,14 @@
 
 import '../assets/styles/modaldate.css'
-import React from 'react';
+import {React ,useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 function ModalData({show, handleClose}){
+  const [nombre, setNombre] = useState();
+  const mostrarNombre=(e)=>{
+    setNombre(e.target.value)
+        console.log(nombre)
+  }
 
     
     return(
@@ -15,7 +20,7 @@ function ModalData({show, handleClose}){
         <Modal.Body className='body' >
             <div>
             <label htmlFor="inputData">Nombre</label>
-            <input type="text" className="form-control" id="inputnombre"  /> 
+            <input  type="text" className="form-control" id="inputnombre"  /> 
             </div>
             <div>
             <label htmlFor="inputData">Nombre Finca</label>
@@ -25,7 +30,7 @@ function ModalData({show, handleClose}){
             
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose} >
             Cerrar
           </Button>
           <Button variant="primary" onClick={handleClose}>

@@ -9,12 +9,12 @@ function LoadData(){
         setFile(event.target.files[0])
         console.log('si leyo')
       }
-   
+
     const submitHandler =(e)=>{
         e.preventDefault();
         if (file) {
             fileReader.onload = function (event) {
-                const csvOutput = event.target.result;
+                const csvOutput = (event.target.result)
                 localStorage.setItem('csvOutput',csvOutput)
                 console.log(csvOutput)    
             };

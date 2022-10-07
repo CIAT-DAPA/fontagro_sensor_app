@@ -11,6 +11,7 @@ this.addEventListener('install',(event)=>{
                 './logo192.png',
                 '/manifest.json',
                 '/personaldata',
+                '/visualization',
                 '/static/js/bundle.js',
                 '/static/media/background-home.8e1b3c8572e5a46c114f.jpg',
                 '/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png',
