@@ -1,6 +1,6 @@
 import {React, useState} from "react";
 import '../assets/styles/visualization.css'
-import * as d3 from 'd3'
+
 
 import ModalData from "./ModalData";
 import ModalDate from "./ModalDate";
