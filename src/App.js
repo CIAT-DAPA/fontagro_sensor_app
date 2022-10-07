@@ -12,7 +12,7 @@ function App() {
   return ( 
     <div className="App">
       {/* <ShowPlots /> */}
-      <Routes>
+      <Routes basename='/fontagro_sensor_app'>
       
       <Route path='/' element={<Home  />}></Route>
       <Route path='/data' element={<><Header /> <LoadData /> </>}></Route>
