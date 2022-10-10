@@ -5,7 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 function ModalDate({showw,handleClosee}){
     const Mostrar=(e)=>{
         const date =e.target.value;
-        console.log(date) //getting value of date
+        console.log(date)
+         //getting value of date
     }
     return(
         <div>

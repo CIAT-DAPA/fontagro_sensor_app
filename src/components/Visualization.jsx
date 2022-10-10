@@ -13,15 +13,18 @@ function LoadDatatwo(){
     const [showw, setShoww] = useState(false);
     const handleClosee = () => setShoww(false);
     const handleShoww = () => setShoww(true);
-    const data= localStorage.getItem('csvOutput')
+    const data= localStorage.getItem('datos')
+    const datan= localStorage.getItem('nombre')
    
     const prueba=()=>{
-        console.log(data)
+        console.log(JSON.parse(data))
     }
     return(
         <>
+        
         <div className="plots-container">
-            <p>graficas aqui</p>
+            <p>{datan}</p>
+            
             <div className="button-container">
                 <button onClick={handleShoww}  className="btns btn-cargar fa fa-calendar"> Fechas</button>
                 <button onClick={handleShow}  className="btns btn-cargar fa fa-user"> Datos</button>

@@ -7,9 +7,10 @@ function ModalData({show, handleClose}){
   const [nombre, setNombre] = useState();
   const mostrarNombre=(e)=>{
     setNombre(e.target.value)
-        console.log(nombre)
+    localStorage.setItem('nombre',nombre)
+        
   }
-
+  console.log(nombre)
     
     return(
         <div className='modal'>
@@ -19,8 +20,8 @@ function ModalData({show, handleClose}){
         </Modal.Header>
         <Modal.Body className='body' >
             <div>
-            <label htmlFor="inputData">Nombre</label>
-            <input  type="text" className="form-control" id="inputnombre"  /> 
+            <label  htmlFor="inputData">Nombre</label>
+            <input onChange={mostrarNombre} type="text" className="form-control" id="inputnombre"  /> 
             </div>
             <div>
             <label htmlFor="inputData">Nombre Finca</label>

@@ -3,10 +3,11 @@ this.addEventListener('install',(event)=>{
     event.waitUntil(
         caches.open(cacheData).then((cache)=>{
             cache.addAll([
-                './',
+                '/',
                 'https://code.jquery.com/jquery-3.2.1.slim.min.js',
                 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
                 '/data',
+                '/fontagro_sensor_app',
                 './favicon.ico',
                 '/logo192.png',
                 '/manifest.json',
