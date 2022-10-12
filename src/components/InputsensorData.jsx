@@ -26,7 +26,7 @@ function LoadData(){
     } */
     const valores =(e)=>{
         e.preventDefault()
-        const uploadconfirm= document.getElementById('cargar').addEventListener('click',()=>{
+        
             Papa.parse(document.getElementById('inputdata').files[0],{
                 download: true,
                 header: true,
@@ -37,12 +37,9 @@ function LoadData(){
                     localStorage.setItem('datos',JSON.stringify(datos)) 
                 }
             })
-        })
+        
     }
     
-    
-    
-
     return(
         
         <form className='form-data' >
@@ -53,8 +50,8 @@ function LoadData(){
                     <input type="file" className="form-control" id="inputdata" accept=".csv" /* onChange={handleChange} *//>     
                 </div>
                 <div className="buttons-container">
-                    <button id="cargar" className="btns btn-cargar fa fa-upload" onClick={valores}><a href="">Cargar</a></button>
-                    <button  className="btns btn-aceptar fa fa-upload"><Link to="/personaldata">Continuar</Link></button>
+                    <button id="cargar" className="btns btn-cargar fa " onClick={valores}><a href="">Cargar</a></button>
+                    <button  className="btns btn-aceptar "><Link to="/personaldata">Continuar</Link></button>
                 </div>     
         </form>
     );

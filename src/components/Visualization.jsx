@@ -8,30 +8,32 @@ import ModalDate from "./ModalDate";
 
 function LoadDatatwo(){
     const data= localStorage.getItem('datos')
+    const nombre= localStorage.getItem('nombre')
     const  datos= JSON.parse(data)
     const fechas= [];
     const porcentaje=[];
    
     const getData=()=>{
-        for(let i=0; i<10;i++){
+        for(let i=0; i<8;i++){
             fechas.push(datos.data[i].Fecha)
             porcentaje.push(datos.data[i].SW10)
             
         }
     }
-    
+    const datosP = ['15.25','12.35','14,42','18.81']
     getData()
     porcentaje.shift()
     fechas.shift()
    
     console.log(fechas)
     console.log(porcentaje)
-    const series= [{
+
+    const series= [/* {
         name: 'series1',
-        data: ["31", "40", "28", "51", "42", "109", "100"],
-      }, {
-        name: 'series2',
-        data: [1,2,3]
+        data: ["31", "40", "28", "51", "42"],
+      }, */ {
+        name: 'Porcentaje Humedad',
+        data: porcentaje
       }];
        const options= {
         chart: {
@@ -46,11 +48,11 @@ function LoadDatatwo(){
         },
         xaxis: {
           type: 'datetime',
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+          categories: fechas
         },
         tooltip: {
           x: {
-            format: 'dd/MM/yy HH:mm'
+            format: 'yy/MM/dd HH:mm'
           },
         },
       }
@@ -68,15 +70,16 @@ function LoadDatatwo(){
         <>
         
         <div className="plots-container">
+        <p className="texto">{nombre}</p>
         <div id="chart">
+          
              <ReactApexChart options={options} series={series} type="area" height={350} />
         </div>
             
             
             <div className="button-container">
-                <button onClick={handleShoww}  className="btns btn-cargar fa fa-calendar"> Fechas</button>
-                <button onClick={handleShow}  className="btns btn-cargar fa fa-user"> Datos</button>
-                <button  className="btn-pdf btn-cargar fa fa-download" /* onClick={prueba} */>  PDF</button>
+                {/* <button onClick={handleShoww}  className="btns btn-cargar fa fa-calendar"> Fechas</button>
+                <button onClick={handleShow}  className="btns btn-cargar fa fa-user"> Datos</button> */}
             </div>
         </div>     
         <ModalDate showw={showw} handleClosee={handleClosee} />  

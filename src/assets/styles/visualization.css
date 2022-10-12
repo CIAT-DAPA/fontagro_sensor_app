@@ -1,20 +1,20 @@
 .plots-container{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
     margin: 0 auto;
-    /* background-image: url('../images/background-home.jpg'); */
+    background-image: url('../images/background-home.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 p{
-    color: white;
+    
     margin-bottom: 50px;
     font-size: 25px;
     text-align: center;
-    color:  white;
+    color:  black;
     font-weight: bold;
 }
 .button-container{

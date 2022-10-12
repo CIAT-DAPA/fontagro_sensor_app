@@ -10,7 +10,6 @@ function ModalData({show, handleClose}){
     localStorage.setItem('nombre',nombre)
         
   }
-  console.log(nombre)
     
     return(
         <div className='modal'>
