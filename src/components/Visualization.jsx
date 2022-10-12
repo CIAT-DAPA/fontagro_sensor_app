@@ -14,7 +14,7 @@ function LoadDatatwo(){
     const porcentaje=[];
    
     const getData=()=>{
-        for(let i=0; i<8;i++){
+        for(let i=0; i<datos.data.length;i++){
             fechas.push(datos.data[i].Fecha)
             porcentaje.push(datos.data[i].SW10)
             
@@ -38,7 +38,7 @@ function LoadDatatwo(){
        const options= {
         chart: {
           height: 350,
-          type: 'area'
+          type: 'line'
         },
         dataLabels: {
           enabled: false
@@ -73,7 +73,7 @@ function LoadDatatwo(){
         <p className="texto">{nombre}</p>
         <div id="chart">
           
-             <ReactApexChart options={options} series={series} type="area" height={350} />
+             <ReactApexChart options={options} series={series} type="line" height={350} />
         </div>
             
             
