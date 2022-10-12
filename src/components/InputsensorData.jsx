@@ -50,8 +50,7 @@ function LoadData(){
                     <input type="file" className="form-control" id="inputdata" accept=".csv" /* onChange={handleChange} *//>     
                 </div>
                 <div className="buttons-container">
-                    <button id="cargar" className="btns btn-cargar fa " onClick={valores}><a href="">Cargar</a></button>
-                    <button  className="btns btn-aceptar "><Link to="/personaldata">Continuar</Link></button>
+                    <button onClick={valores} className="btns btn-aceptar "><Link to="/personaldata">Continuar</Link></button>
                 </div>     
         </form>
     );

@@ -36,5 +36,5 @@ label{
 .buttons-container{
     display: flex;
     width: 240px;
-    justify-content: space-between;
+    justify-content: center;
 }
