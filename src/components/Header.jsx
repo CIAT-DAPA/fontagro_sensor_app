@@ -15,12 +15,13 @@ function Header() {
           <li className="nav-item">
             <Link className="nav-link" to="/data">Carga datos sensor</Link>
           </li>
-          <li className="nav-item">
+         {/*  <li className="nav-item">
             <Link className="nav-link" to="/personaldata">Datos de suelo</Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link className="nav-link" to="/visualization">Visualización</Link>
           </li>  
+          
         </ul>
       </div>
     </nav>

@@ -4,7 +4,7 @@ import Header from './components/Header';
 import PersonalData from './components/InputUserData';
 import LoadData from './components/InputsensorData';
 import LoadDatatwo from './components/Visualization';
-
+import ShowDropdown from './components/Dropdown';
 
 /* import ModalData from './components/Moda'; */
 
@@ -18,7 +18,7 @@ function App() {
       <Route path='/' element={<><Home  /></>}></Route>
       <Route path='/data' element={<><Header /> <LoadData /> </>}></Route>
       <Route path='/personaldata' element={<><Header /> <PersonalData /></>}></Route>
-      <Route path='/visualization' element={<><Header /> <LoadDatatwo /></>}></Route>
+      <Route path='/visualization' element={<><ShowDropdown /> <LoadDatatwo /></>}></Route>
       </Routes>
       
     </div>
