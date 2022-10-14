@@ -222,19 +222,12 @@ function LoadDatatwo(){
           <p>Comportamiento de humedad</p>
           <div id="chart">
               <ReactApexChart options={optionsone} series={seriesone} type="line" height={350} />
-              <ReactApexChart options={optionspr} series={seriespr} type="area" height={450} />
+              <ReactApexChart options={optionspr} series={seriespr} type="area" height={350} />
               {/* <ReactApexChart options={optionsline} series={seriesline} type="area" height={350} /> */}
             {/*   <ReactApexChart options={optionsone} series={seriesone} type="bar" height={350} /> */}
 
           </div>
-          <div id="wrapper">
-            <div id="chart-line2">
-              <ReactApexChart options={options} series={series} type="line" height={230} />
-            </div>
-            <div id="chart-line">
-             <ReactApexChart options={optionsLine} series={seriesLine} type="area" height={130} />
-            </div>
-        </div>
+         
          
         </div>     
       {/*   <ModalDate showw={showw} handleClosee={handleClosee} />  
