@@ -1,15 +1,18 @@
-
 import '../assets/styles/modaldate.css'
 import {React ,useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 function ModalData({show, handleClose}){
   const [nombre, setNombre] = useState();
+  const [finca, setFinca] = useState();
   const mostrarNombre=(e)=>{
-    setNombre(e.target.value)
-    localStorage.setItem('nombre',nombre)
-        
+    setNombre(e.target.value)     
   }
+  const mostrarFinca=(e)=>{
+    setFinca(e.target.value)     
+  }
+  console.log(nombre)
+  console.log(finca)
     
     return(
         <div className='modal'>
@@ -24,7 +27,7 @@ function ModalData({show, handleClose}){
             </div>
             <div>
             <label htmlFor="inputData">Nombre Finca</label>
-            <input type="text" className="form-control" id="inputfinca"  /> 
+            <input onChange={mostrarFinca} type="text" className="form-control" id="inputfinca"  /> 
             </div>
             
             

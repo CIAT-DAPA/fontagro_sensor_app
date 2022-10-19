@@ -30,10 +30,6 @@ function ModalDate({showw,handleClosee}){
                     </Modal.Footer>
              </Modal>
         </div>
-    
-        
-        
-        
     )
 }
 export default ModalDate;

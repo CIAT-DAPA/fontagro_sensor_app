@@ -1,27 +1,24 @@
 import './App.css';
-import Home from './components/Home';
 import Header from './components/Header';
-import PersonalData from './components/InputUserData';
 import LoadData from './components/InputsensorData';
+import Footer from './components/Footer';
 import LoadDatatwo from './components/Visualization';
-import ShowDropdown from './components/Dropdown';
+import NavVisualiation from './components/NavVisualization';
+import { useState } from 'react';
 
-/* import ModalData from './components/Moda'; */
 
 import { Route, Routes} from "react-router-dom"
 function App() {
+ 
+  
   return ( 
+    <>
     <div className="App">
-      {/* <ShowPlots /> */}
-      <Routes >
-      
-      <Route path='/' element={<><Home  /></>}></Route>
-      <Route path='/data' element={<><Header /> <LoadData /> </>}></Route>
-      <Route path='/personaldata' element={<><Header /> <PersonalData /></>}></Route>
-      <Route path='/visualization' element={<><ShowDropdown /> <LoadDatatwo /></>}></Route>
-      </Routes>
-      
-    </div>
+    <Routes >
+    <Route path='/' element={<><Header /> <LoadData />  <Footer/></>}></Route>
+    <Route path='/visualization' element={<><NavVisualiation /> <LoadDatatwo  /> <Footer /> </>}></Route>
+    </Routes>
+  </div></>
   );
 }
 export default App;

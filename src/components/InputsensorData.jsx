@@ -4,29 +4,8 @@ import {Link} from "react-router-dom"
 import Papa from 'papaparse';
 
 function LoadData(){
-    const [file, setFile] = useState()
-    /* const [file, setFile] = useState();
-    const fileReader = new FileReader();
-    function handleChange(event) {
-        setFile(event.target.files[0])
-        console.log('si leyo')
-      }
-
-    const submitHandler =(e)=>{
-        e.preventDefault();
-        if (file) {
-            fileReader.onload = function (event) {
-                const csvOutput = (event.target.result)
-                localStorage.setItem('csvOutput',csvOutput)
-                console.log(csvOutput)    
-            };
-            fileReader.readAsText(file);       
-        }
-        
-    } */
     const valores =(e)=>{
         e.preventDefault()
-        
             Papa.parse(document.getElementById('inputdata').files[0],{
                 download: true,
                 header: true,
@@ -36,10 +15,8 @@ function LoadData(){
                     console.log(datos); 
                     localStorage.setItem('datos',JSON.stringify(datos)) 
                 }
-            })
-        
-    }
-    
+            });     
+    } 
     return(
         
         <form className='form-data' >

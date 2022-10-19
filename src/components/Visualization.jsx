@@ -1,17 +1,19 @@
 import {React, useState} from "react";
 import '../assets/styles/visualization.css'
 import ReactApexChart from 'react-apexcharts'
+import Carousel from 'react-bootstrap/Carousel';
+import ModalCampo from "./ModalCampo";
+import ModalData from "./ModalData";
 
 
-/* import ModalData from "./ModalData";
-import ModalDate from "./ModalDate"; */
-
-function LoadDatatwo(){
+function LoadDatatwo(props){
     const data= localStorage.getItem('datos')
-    const nombre= localStorage.getItem('nombre')
+    const campo= localStorage.getItem('campos')
     const  datos= JSON.parse(data)
     const fechas= [];
     const porcentaje=[];
+    
+    
    
     const getData=()=>{
         for(let i=0; i<datos.data.length;i++){
@@ -20,21 +22,18 @@ function LoadDatatwo(){
             
         }
     }
-    const datosP = [5,6,7,8,9,11,12]
-    getData()
-    console.log(parseFloat(porcentaje))
-    porcentaje.shift()
-    fechas.shift()
-   
+    getData();
+    porcentaje.shift();
+    fechas.shift();
     
-   
+
      const seriesone= [ {
         name: 'Porcentaje Humedad',
         data: porcentaje
       }];
        const optionsone= {
         chart: {
-          height: 350,
+          height: 300,
           type: 'line'
         },
         dataLabels: {
@@ -52,11 +51,40 @@ function LoadDatatwo(){
             format: 'yy/MM/dd HH:mm'
           },
         },
+        annotations: {
+          yaxis: [
+            {
+              y: '30',
+              borderColor: '#00E396',
+              label: {
+                borderColor: '#00E396',
+                style: {
+                  color: '#fff',
+                  background: '#00E396'
+                },
+                text: 'Capacidad de campo'
+              }
+            },
+            {
+              y: '20',
+              borderColor: 'red',
+              label: {
+                borderColor: 'red',
+                style: {
+                  color: '#fff',
+                  background: 'red'
+                },
+                text: 'Punto de marchitez'
+              }
+            }
+           
+          ]
+        }
       }
       
 
      const series= [{
-        data: datosP
+        data: ''
       }];
        const options= {
         chart: {
@@ -87,7 +115,7 @@ function LoadDatatwo(){
       };
     
        const seriesLine= [{
-        data: datosP
+        data: ''
       }];
        const optionsLine= {
          chart: {
@@ -211,30 +239,41 @@ function LoadDatatwo(){
         max: 40
       }
     }
-  
-
-
-       
-    return(
-        <>
-        
-        <div className="plots-container">
-          <p>Comportamiento de humedad</p>
-          <div id="chart">
-              <ReactApexChart options={optionsone} series={seriesone} type="line" height={350} />
-              <ReactApexChart options={optionspr} series={seriespr} type="area" height={350} />
-              {/* <ReactApexChart options={optionsline} series={seriesline} type="area" height={350} /> */}
-            {/*   <ReactApexChart options={optionsone} series={seriesone} type="bar" height={350} /> */}
-
-          </div>
-         
-         
-        </div>     
-      {/*   <ModalDate showw={showw} handleClosee={handleClosee} />  
-        <ModalData show={show} handleClose={handleClose} /> */}
-        
-        </>
-        
+    return (
+      <>
+      
+       <Carousel variant="dark">
+      <Carousel.Item>
+      <ReactApexChart
+                options={optionsone}
+                series={seriesone}
+                type="line"
+                height={350}
+              />
+      </Carousel.Item>
+     
+      <Carousel.Item>
+      <ReactApexChart
+                options={optionsone}
+                series={seriesone}
+                type="line"
+                height={350}
+              />
+      </Carousel.Item>
+      <Carousel.Item>
+      <ReactApexChart 
+    
+                options={optionsone}
+                series={seriesone}
+                type="line"
+                height={350}
+              
+              />
+      </Carousel.Item>
+    </Carousel>
+        <ModalData  />
+        <ModalCampo  />
+      </>
     );
 }
 export default LoadDatatwo;
