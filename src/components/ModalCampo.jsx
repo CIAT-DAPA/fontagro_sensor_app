@@ -1,18 +1,26 @@
 import '../assets/styles/modalcampo.css'
 import {React,useState, useContext } from 'react';
+import { DataContext } from '../context/StaticContex';
 
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function ModalCampo({showc, handleClosec}){
+    const {contextData, setContexData} = useContext(DataContext);
     const [campo, setCampo] = useState()
+    
     const mostrarValue=()=>{
        const selectForm= document.getElementById('select'); //getting  values of the select
-       setCampo(selectForm.value.split(','))   
+         setContexData(selectForm.value.split(','))   
+         
+        
        handleClosec()
-       localStorage.setItem('campos',campo)
     }
-    console.log(campo)
+    
+    
+    
+     
+    console.log(contextData)
     return(
         <>
         <div className='modal'>
@@ -23,9 +31,9 @@ function ModalCampo({showc, handleClosec}){
         <Modal.Body className='body' >
         <select id='select' className="form-select" aria-label="Default select example">
             <option selected>Seleccione un campo</option>
-            <option  className="suelo"  value='9,4'>Arenoso</option>
+            <option  className="suelo"  value={'9,4'}>Arenoso</option>
             <option className="suelo" value={'14,6'}>Franco Arcilloso</option>
-            <option className="suelo" value={'22,10'}>Franca</option>
+            <option className="suelo" value={'22,15'}>Franca</option>
             <option className="suelo" value={'27,13'}>Franco Arcilloso</option>
             <option className="suelo" value={'24,12'}>Franco Arcillo Arenoso</option>
             <option className="suelo" value={'31,15'}>Arsillo Arenosa</option>

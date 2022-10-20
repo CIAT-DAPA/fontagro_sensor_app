@@ -3,6 +3,7 @@ import '../assets/styles/modaldata.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 function ModalDate({showw,handleClosee}){
+    
     const Mostrar=(e)=>{
         const date =e.target.value;
         console.log(date)

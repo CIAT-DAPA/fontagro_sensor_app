@@ -1,9 +1,11 @@
 import '../assets/styles/modaldate.css'
-import {React ,useState} from 'react';
+import {React ,useState, useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { DataContext } from '../context/StaticContex';
 function ModalData({show, handleClose}){
-  const [nombre, setNombre] = useState();
+  const {nombre, setNombre} = useContext(DataContext);
+  /* const [nombre, setNombre] = useState(); */
   const [finca, setFinca] = useState();
   const mostrarNombre=(e)=>{
     setNombre(e.target.value)     
@@ -43,8 +45,6 @@ function ModalData({show, handleClose}){
       </Modal>
         
         </div>
-        
-        
     )
 }
 export default ModalData;
