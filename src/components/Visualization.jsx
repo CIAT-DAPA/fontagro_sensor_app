@@ -8,7 +8,7 @@ import  { DataContext } from '../context/StaticContex'
 
 
 function LoadDatatwo(props){
-  
+  const [estado, setEstado]=useState('')
    const {contextData} = useContext(DataContext);
    const {valorNombre} = useContext(DataContext);
     const data= localStorage.getItem('datos')
@@ -24,7 +24,16 @@ function LoadDatatwo(props){
     getData();
     porcentaje.shift();
     fechas.shift();
+ 
+      if((typeof(contextData))=='string'){
+        /* setEstado(`Su capacidad de campo es ${contextData[0]} y su punto de marchitez es ${contextData[1]}`) */
+      }
+        
+      
+     
+    console.log(DataContext)
      const seriesone= [ {
+      
         name: 'Porcentaje Humedad',
         data: porcentaje
       }];
@@ -40,18 +49,35 @@ function LoadDatatwo(props){
           curve: 'smooth'
         },
         xaxis: {
+          title: {
+            text: 'Fechas'
+          },
+
           type: 'datetime',
           categories: fechas
         },
+        
         tooltip: {
           x: {
             format: 'dd/MM/yy HH:mm'
           },
         },
+      
+        yaxis: [{
+          title: {
+            text: 'Porcentaje de Humedad',
+          },
+          max: 60,
+          min:0
+        
+        }],
+       
+        
         annotations: {
           
            yaxis: [
             {
+             
               y: contextData[0],
               borderColor: '#00E396',
               label: {
@@ -77,7 +103,9 @@ function LoadDatatwo(props){
             }
            
           ] 
-        }
+        },
+        
+        
       }
     return (
       
@@ -96,10 +124,12 @@ function LoadDatatwo(props){
         <input onChange={filterdata} type="date" id="endDate"/> */}
         
         </div>
+        
+        <p   id="parrafoinfo">En la grafica puede ver el comportamiento de la humedad de suelo en el tiempo, al ingresae el tipo de campo de su finca, podra visualizar dos lineas que represetan los limites de humedad aptos  </p> 
      {/*  <Carousel variant="dark">
       <Carousel.Item>
        
-     
+    
       </Carousel.Item>
      
       <Carousel.Item>

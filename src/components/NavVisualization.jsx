@@ -46,7 +46,7 @@ function NavVisualiation(){
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Link className="nav-link" to="/">Inicio</Link>
                     <NavDropdown
-                      title="Selccione"
+                      title="Seleccione"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       <NavDropdown.Item onClick={handleShow} href="">Datos</NavDropdown.Item>

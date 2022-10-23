@@ -5,9 +5,12 @@ import { faFacebook, faTwitter,faYoutube } from "@fortawesome/free-brands-svg-ic
 function Footer() {
   return (
     <footer id="footer" className="footer-1">
+      
       <div className="main-footer widgets-dark typo-light">
+      
         {/* <h5 className="participntes">Participantes Principales</h5> */}
         <div className="container">
+        
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget subscribe no-box">

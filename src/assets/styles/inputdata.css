@@ -31,6 +31,7 @@
     margin: 0 auto;
     background-image: url('../images/background-data-user.jpg');
     background-size: cover;
+    border-bottom: 1px solid gray     ;
 }
 .text-form{
     margin-bottom: 50px;

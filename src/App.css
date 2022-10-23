@@ -5,9 +5,5 @@
   font-family:sans-serif ;
 }
 .App{
- /*  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #d1e8e0; */
+ width: 98vw;
 }

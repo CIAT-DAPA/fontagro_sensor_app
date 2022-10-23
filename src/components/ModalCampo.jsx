@@ -13,7 +13,6 @@ function ModalCampo({showc, handleClosec}){
        const selectForm= document.getElementById('select'); //getting  values of the select
          setContexData(selectForm.value.split(','))   
          
-        
        handleClosec()
     }
     
