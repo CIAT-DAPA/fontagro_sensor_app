@@ -1,6 +1,7 @@
 import {React, useContext, useState} from "react";
 import '../assets/styles/visualization.css'
 import ReactApexChart from 'react-apexcharts'
+import ApexCharts from "apexcharts";
 import Carousel from 'react-bootstrap/Carousel';
 import ModalCampo from "./ModalCampo";
 import ModalData from "./ModalData";
@@ -22,6 +23,7 @@ function LoadDatatwo(props){
         }
     }
     getData();
+  
     porcentaje.shift();
     fechas.shift();
  
@@ -38,6 +40,9 @@ function LoadDatatwo(props){
         data: porcentaje
       }];
        const optionsone= {
+        /* theme:{
+          mode:'dark'
+        }, */
         chart: {
           height: 300,
           type: 'line'
@@ -107,6 +112,68 @@ function LoadDatatwo(props){
         
         
       }
+     
+      const seriestwo= [ {
+      
+        name: 'Porcentaje Humedad',
+        data: porcentaje
+      }];
+       const optionstwo= {
+        chart: {
+          height: 300,
+          type: 'line'
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        xaxis: {
+          title: {
+            text: 'Fechas'
+          },
+
+          type: 'datetime',
+          categories: fechas
+        },
+        
+        tooltip: {
+          x: {
+            format: 'dd/MM/yy HH:mm'
+          },
+        },
+      
+        yaxis: [{
+          title: {
+            text: 'Porcentaje de Humedad',
+          },
+          max: 60,
+          min:0
+        
+        }],
+       
+        
+        annotations: {
+          
+          yaxis: [
+            {
+              y: contextData[1],
+              y2: 0,
+              borderColor: '#000',
+              fillColor: 'Red',
+              label: {
+                text: 'Punto de marchitez'
+              }
+             
+            }
+          ]
+           
+        },
+       
+        
+        
+      }
     return (
       
       <>
@@ -114,18 +181,24 @@ function LoadDatatwo(props){
       <div className="plots-container">
         <p></p>
       <div id="chart">
-        <ReactApexChart
+      <ReactApexChart
                 options={optionsone}
                 series={seriesone}
                 type="line"
                 height={350}
-              />
-        {/* <input onChange={filterdata} type="date" id="startDate" />
-        <input onChange={filterdata} type="date" id="endDate"/> */}
-        
+              /> 
+               
+               <p   >En la grafica puede ver el comportamiento de la humedad de suelo en el tiempo, al ingresar el tipo de campo de su finca, podra visualizar dos lineas que represetan los limites de humedad aptos  </p> 
         </div>
+        <ReactApexChart
+                options={optionstwo}
+                series={seriestwo}
+                type="line"
+                height={350}
+              />
         
-        <p   id="parrafoinfo">En la grafica puede ver el comportamiento de la humedad de suelo en el tiempo, al ingresae el tipo de campo de su finca, podra visualizar dos lineas que represetan los limites de humedad aptos  </p> 
+        
+        
      {/*  <Carousel variant="dark">
       <Carousel.Item>
        
