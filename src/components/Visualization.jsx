@@ -190,13 +190,13 @@ function LoadDatatwo(props){
                
                <p   >En la grafica puede ver el comportamiento de la humedad de suelo en el tiempo, al ingresar el tipo de campo de su finca, podra visualizar dos lineas que represetan los limites de humedad aptos  </p> 
         </div>
-        <ReactApexChart
+        {/* <ReactApexChart
                 options={optionstwo}
                 series={seriestwo}
                 type="line"
                 height={350}
               />
-        
+         */}
         
         
      {/*  <Carousel variant="dark">
