@@ -72,8 +72,8 @@ transition: all 250ms ease-in-out 0s;
 
 }
 .logos{
-    width: 120px;
-    height: 35px;
+    width: 130px;
+    height: 45px;
     margin-bottom: 10px;
 }
 img{
@@ -100,4 +100,7 @@ a{
         align-items: center;
         border-bottom: 1px solid gray;
     }
+}
+.text-partners{
+    background-color: #e6eced;
 }

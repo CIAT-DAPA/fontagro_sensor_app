@@ -24,11 +24,11 @@ console.log(name)
   return ( 
     <>
     <DataContextProvider >
-    <div className="App">
-    <ModalCampo parentcallback={handleCallback} hola={hola} />
+    <div className="App ">
+    <ModalCampo parentcallback={handleCallback}  />
     <Routes >
       <Route path='/' element={<><Header /> <LoadData />  <Footer/></>}></Route>
-      <Route path='/visualization' element={<><NavVisualiation /> <LoadDatatwo hola={hola} /> <Footer /> </>}></Route>
+      <Route path='/visualization' element={<><NavVisualiation /> <LoadDatatwo  /> <Footer /> </>}></Route>
     </Routes>
   </div>
   </DataContextProvider>

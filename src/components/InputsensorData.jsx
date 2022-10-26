@@ -18,8 +18,8 @@ function LoadData(){
             });     
     } 
     return(
-        
-        <form className='form-data' >
+        <div className="">
+            <form className='form-data' >
             <p className="text-form">Por favor carga los datos de tu sensor de humedad presionando Seleccionar archivo</p>
             <div className="form-row"/>
                 <div className="nombre">
@@ -30,6 +30,8 @@ function LoadData(){
                     <button onClick={valores} className="btns btn-aceptar "><Link to="/visualization">Continuar</Link></button>
                 </div>     
         </form>
+        </div>
+        
     );
 }
 export default LoadData;

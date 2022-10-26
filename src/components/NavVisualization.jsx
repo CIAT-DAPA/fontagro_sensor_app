@@ -44,16 +44,18 @@ function NavVisualiation(){
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Link className="nav-link" to="/">Inicio</Link>
-                    <NavDropdown
+                    <Link className="nav-link" to="/">Regresar al Inicio</Link>
+                    <Link onClick={handleShow}className="nav-link" to="">Ingresar datos</Link>
+                    <Link onClick={handleShowc} className="nav-link" to="">Seleccionar Suelo</Link>
+                    {/* <NavDropdown
                       title="Seleccione"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
-                      <NavDropdown.Item onClick={handleShow} href="">Datos</NavDropdown.Item>
-                      <NavDropdown.Item onClick={handleShowc} href="">
-                        Tipo de Campos
+                      <NavDropdown.Item  href="">Datos</NavDropdown.Item>
+                      <NavDropdown.Item  href="">
+                        Tipo de Suelos
                       </NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>

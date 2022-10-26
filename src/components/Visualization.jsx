@@ -3,15 +3,13 @@ import '../assets/styles/visualization.css'
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from "apexcharts";
 import Carousel from 'react-bootstrap/Carousel';
-import ModalCampo from "./ModalCampo";
-import ModalData from "./ModalData";
 import  { DataContext } from '../context/StaticContex'
-
-
 function LoadDatatwo(props){
-  const [estado, setEstado]=useState('')
-   const {contextData} = useContext(DataContext);
-   const {valorNombre} = useContext(DataContext);
+  let tituloGrafica=''
+  let tituloGeneral=''
+   const {contextDatao} = useContext(DataContext);
+   const {nombreP} = useContext(DataContext);
+   const {finca} = useContext(DataContext);
     const data= localStorage.getItem('datos')
     const  datos= JSON.parse(data)
     const fechas= [];
@@ -23,17 +21,19 @@ function LoadDatatwo(props){
         }
     }
     getData();
-  
     porcentaje.shift();
     fechas.shift();
- 
-      if((typeof(contextData))=='string'){
-        /* setEstado(`Su capacidad de campo es ${contextData[0]} y su punto de marchitez es ${contextData[1]}`) */
+      if((contextDatao[2])!=undefined){
+        tituloGrafica=(`Suelo:  ${contextDatao[2]}`)
+      }else{
+        tituloGrafica='';
       }
-        
-      
-     
-    console.log(DataContext)
+      if(nombreP != '' && finca != '' ){
+        tituloGeneral=`Hola ${nombreP} el comportamiento de de humedad de la finca ${finca} es el siguiente`
+      }else{
+        tituloGeneral=''
+      }
+
      const seriesone= [ {
       
         name: 'Porcentaje Humedad',
@@ -61,6 +61,10 @@ function LoadDatatwo(props){
           type: 'datetime',
           categories: fechas
         },
+        title: {
+          text: tituloGrafica, 
+          align: 'left',
+        },
         
         tooltip: {
           x: {
@@ -76,6 +80,7 @@ function LoadDatatwo(props){
           min:0
         
         }],
+        
        
         
         annotations: {
@@ -83,7 +88,7 @@ function LoadDatatwo(props){
            yaxis: [
             {
              
-              y: contextData[0],
+              y: contextDatao[0],
               borderColor: '#00E396',
               label: {
                 borderColor: '#00E396',
@@ -95,7 +100,7 @@ function LoadDatatwo(props){
               }
             },
             {
-              y: contextData[1],
+              y: contextDatao[1],
               borderColor: 'red',
               label: {
                 borderColor: 'red',
@@ -158,7 +163,7 @@ function LoadDatatwo(props){
           
           yaxis: [
             {
-              y: contextData[1],
+              y: contextDatao[1],
               y2: 0,
               borderColor: '#000',
               fillColor: 'Red',
@@ -170,9 +175,6 @@ function LoadDatatwo(props){
           ]
            
         },
-       
-        
-        
       }
     return (
       
@@ -181,6 +183,9 @@ function LoadDatatwo(props){
       <div className="plots-container">
         <p></p>
       <div id="chart">
+      <p>{tituloGeneral}</p>
+  
+        
       <ReactApexChart
                 options={optionsone}
                 series={seriesone}

@@ -1,12 +1,13 @@
-import {React} from "react";
+import {React, useContext} from "react";
 import '../assets/styles/modaldata.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { DataContext } from '../context/StaticContex';
 function ModalDate({showw,handleClosee}){
-    
+    const {contextDatau, setContexDatau} = useContext(DataContext);
     const Mostrar=(e)=>{
         const date =e.target.value;
-        console.log(date)
+        
          //getting value of date
     }
     return(

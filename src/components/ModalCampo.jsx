@@ -6,20 +6,16 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function ModalCampo({showc, handleClosec}){
-    const {contextData, setContexData} = useContext(DataContext);
-    const [campo, setCampo] = useState()
+    const {contextDatao, setContexDatao} = useContext(DataContext);
+    
     
     const mostrarValue=()=>{
        const selectForm= document.getElementById('select'); //getting  values of the select
-         setContexData(selectForm.value.split(','))   
+         setContexDatao(selectForm.value.split(','))   
          
        handleClosec()
     }
-    
-    
-    
-     
-    console.log(contextData)
+
     return(
         <>
         <div className='modal'>
@@ -29,14 +25,14 @@ function ModalCampo({showc, handleClosec}){
         </Modal.Header>
         <Modal.Body className='body' >
         <select id='select' className="form-select" aria-label="Default select example">
-            <option selected>Seleccione un campo</option>
-            <option  className="suelo"  value={'9,4'}>Arenoso</option>
-            <option className="suelo" value={'14,6'}>Franco Arcilloso</option>
-            <option className="suelo" value={'22,15'}>Franca</option>
-            <option className="suelo" value={'27,13'}>Franco Arcilloso</option>
-            <option className="suelo" value={'24,12'}>Franco Arcillo Arenoso</option>
-            <option className="suelo" value={'31,15'}>Arsillo Arenosa</option>
-            <option className="suelo" value={'35,17'}>Arcillosa</option>
+            <option selected>Seleccione un Suelo</option>
+            <option  className="suelo"  value={'9,4,Arenoso'}>Arenoso</option>
+            <option className="suelo" value={'14,6,Franco Arenoso'}>Franco Arenoso</option>
+            <option className="suelo" value={'22,15,Franca'}>Franca</option>
+            <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco Arcilloso</option>
+            <option className="suelo" value={'24,12,Franco Arcillo Arenoso'}>Franco Arcillo Arenoso</option>
+            <option className="suelo" value={'31,15,Arsillo Arenosa'}>Arsillo Arenosa</option>
+            <option className="suelo" value={'35,17,Arcillosa'}>Arcillosa</option>
         </select>     
         </Modal.Body>
         <Modal.Footer>

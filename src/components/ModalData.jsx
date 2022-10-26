@@ -4,23 +4,22 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { DataContext } from '../context/StaticContex';
 function ModalData({show, handleClose}){
-  const {nombre, setNombre} = useContext(DataContext);
-  /* const [nombre, setNombre] = useState(); */
-  const [finca, setFinca] = useState();
+  const  {nombreP, setNombreP}= useContext(DataContext);
+  const {finca, setFinca} = useContext(DataContext);
   const mostrarNombre=(e)=>{
-    setNombre(e.target.value)     
+    setNombreP(e.target.value)
+    
   }
   const mostrarFinca=(e)=>{
     setFinca(e.target.value)     
   }
-  console.log(nombre)
-  console.log(finca)
+ 
     
     return(
         <div className='modal'>
             <Modal  show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Ingrese su nombre y nombre de su finca</Modal.Title>
+          <Modal.Title>Ingrese su nombre y el de la finca</Modal.Title>
         </Modal.Header>
         <Modal.Body className='body' >
             <div>
