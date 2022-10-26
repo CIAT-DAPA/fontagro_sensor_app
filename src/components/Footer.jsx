@@ -17,7 +17,7 @@ function Footer() {
                 <h5 className="">
                   CIAT<span></span>
                 </h5>
-                <a href="https://ciat.cgiar.org/?lang=es"><img
+                <a href="https://ciat.cgiar.org/?lang=es" target="_blank"><img
                   className="logos"
                   src={require("../assets/images/logo-ciat.png")}
                 /></a>
@@ -29,7 +29,7 @@ function Footer() {
                 <h5 className="">
                   Visualiti<span></span>
                 </h5>
-                <a href="https://www.visualiti.co">
+                <a href="https://www.visualiti.co" target="_blank">
                 <img
                   className="logos"
                   src={require("../assets/images/logo-visualiti.png")}
@@ -46,7 +46,7 @@ function Footer() {
                 <h5 className="">
                   Zamorano<span></span>
                 </h5>
-                <a href="https://www.zamorano.edu"><img
+                <a href="https://www.zamorano.edu" target="_blank"><img
                   className="logos"
                   src={require("../assets/images/logo-zamorano.png")}
                 /></a>
@@ -58,7 +58,7 @@ function Footer() {
                 <h5 className="">
                   Fontagro<span></span>
                 </h5>
-                <a href="https://www.fontagro.org/es/">
+                <a href="https://www.fontagro.org/es/" target="_blank">
                 <img
                   className="logos"
                   src={require("../assets/images/logo-fontagro1.png")}
