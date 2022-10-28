@@ -15,7 +15,7 @@ function Footer() {
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget subscribe no-box">
                 <h5 className="">
-                  CIAT<span></span>
+                  <span></span>
                 </h5>
                 <a href="https://ciat.cgiar.org/?lang=es" target="_blank"><img
                   className="logos"
@@ -27,7 +27,7 @@ function Footer() {
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget no-box">
                 <h5 className="">
-                  Visualiti<span></span>
+                  <span></span>
                 </h5>
                 <a href="https://www.visualiti.co" target="_blank">
                 <img
@@ -44,7 +44,7 @@ function Footer() {
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget no-box">
                 <h5 className="">
-                  Zamorano<span></span>
+                  <span></span>
                 </h5>
                 <a href="https://www.zamorano.edu" target="_blank"><img
                   className="logos"
@@ -56,7 +56,7 @@ function Footer() {
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget no-box">
                 <h5 className="">
-                  Fontagro<span></span>
+                  <span></span>
                 </h5>
                 <a href="https://www.fontagro.org/es/" target="_blank">
                 <img
@@ -69,6 +69,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in id tempore laboriosam quia quos eius! Eaque nam nostrum possimus tempora, ipsum eligendi cupiditate saepe voluptatem dolore quas, ratione voluptatibus!</p>
     </footer>
   );
 }

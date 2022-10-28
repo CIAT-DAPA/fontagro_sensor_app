@@ -44,9 +44,10 @@ function NavVisualiation(){
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Link className="nav-link" to="/">Regresar al Inicio</Link>
+                    <Link className="nav-link" to="/">Inicio</Link>
                     <Link onClick={handleShow}className="nav-link" to="">Ingresar datos</Link>
                     <Link onClick={handleShowc} className="nav-link" to="">Seleccionar Suelo</Link>
+                    <Link onClick={handleShoww} className="nav-link" to="">Filtrar Datos</Link>
                     {/* <NavDropdown
                       title="Seleccione"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}

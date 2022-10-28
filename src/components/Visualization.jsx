@@ -23,6 +23,10 @@ function LoadDatatwo(props){
     getData();
     porcentaje.shift();
     fechas.shift();
+    const fe=fechas.toString().split(' ').join('').replace(/\//g,'-')
+    
+    console.log(fe)
+    console.log(datos)
       if((contextDatao[2])!=undefined){
         tituloGrafica=(`Suelo:  ${contextDatao[2]}`)
       }else{
@@ -68,7 +72,7 @@ function LoadDatatwo(props){
         
         tooltip: {
           x: {
-            format: 'dd/MM/yy HH:mm'
+            format: 'dd-MM-yy HH:mm'
           },
         },
       
@@ -195,44 +199,6 @@ function LoadDatatwo(props){
                
                <p   >En la grafica puede ver el comportamiento de la humedad de suelo en el tiempo, al ingresar el tipo de campo de su finca, podra visualizar dos lineas que represetan los limites de humedad aptos  </p> 
         </div>
-        {/* <ReactApexChart
-                options={optionstwo}
-                series={seriestwo}
-                type="line"
-                height={350}
-              />
-         */}
-        
-        
-     {/*  <Carousel variant="dark">
-      <Carousel.Item>
-       
-    
-      </Carousel.Item>
-     
-      <Carousel.Item>
-      <div id="chart">
-        <ReactApexChart
-                options={optionsone}
-                series={seriesone}
-                type="line"
-                height={350}
-              />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-      <ReactApexChart 
-    
-                options={optionsone}
-                series={seriesone}
-                type="line"
-                height={350}
-              
-              />
-      </Carousel.Item>
-    </Carousel> */}
-    {/* <button  >descargr en pdf</button> */}
-    
       </div>
        
         

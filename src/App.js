@@ -5,32 +5,23 @@ import Footer from './components/Footer';
 import LoadDatatwo from './components/Visualization';
 import NavVisualiation from './components/NavVisualization';
 import { useState } from 'react';
-import ModalCampo from './components/ModalCampo';
+import DownloadPdf from './components/Donwload';
 import   {DataContextProvider}  from './context/StaticContex'
 import { Route, Routes} from "react-router-dom"
 function App() {
  
- const state = {
-    campo: "",
-   }
-
-const handleCallback = (childData) =>{
-    this.setCampo({campo: childData})
-}
-const hola= 'campo'
-const {name}= state;
-console.log(name)
-  
   return ( 
     <>
+    
     <DataContextProvider >
-    <div className="App ">
-    <ModalCampo parentcallback={handleCallback}  />
+    <div className="App " id='pagetodownload'>
+    
     <Routes >
       <Route path='/' element={<><Header /> <LoadData />  <Footer/></>}></Route>
-      <Route path='/visualization' element={<><NavVisualiation /> <LoadDatatwo  /> <Footer /> </>}></Route>
+      <Route path='/visualization' element={<><NavVisualiation /> <LoadDatatwo  /> <Footer /> {/* <DownloadPdf rootElementId={'pagetodownload'} DownloadFileName='testPage' /> */}</>}></Route>
     </Routes>
   </div>
+  
   </DataContextProvider>
   </>
   

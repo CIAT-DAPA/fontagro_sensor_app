@@ -21,7 +21,7 @@ function ModalCampo({showc, handleClosec}){
         <div className='modal'>
             <Modal  show={showc} onHide={handleClosec}>
         <Modal.Header closeButton>
-          <Modal.Title>Seleccione su tipo de campo</Modal.Title>
+          <Modal.Title>Seleccione su tipo de Suelo</Modal.Title>
         </Modal.Header>
         <Modal.Body className='body' >
         <select id='select' className="form-select" aria-label="Default select example">

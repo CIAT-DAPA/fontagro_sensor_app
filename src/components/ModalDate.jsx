@@ -14,12 +14,16 @@ function ModalDate({showw,handleClosee}){
         <div>
             <Modal show={showw} onHide={handleClosee}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Ingrese Fecha de siembra</Modal.Title>
+                    <Modal.Title>Ingrese Fecha de Filtro</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <label htmlFor="inputDate">Fecha</label>
-                        <input onChange={Mostrar} type="date" className="form-control" id="inputdate"  /> 
+                     <label for="startDate">Inicio</label>
+                     <input id="startDate" className="form-control" type="date" value='2022-12-17'/>
+                    </div>
+                    <div>
+                     <label for="endDate">Fin</label>
+                     <input id="endDate" className="form-control" type="date" />
                     </div>
                 </Modal.Body>
                     <Modal.Footer>
