@@ -4,11 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { DataContext } from '../context/StaticContex';
 function ModalDate({showw,handleClosee}){
-    const {contextDatau, setContexDatau} = useContext(DataContext);
-    const Mostrar=(e)=>{
-        const date =e.target.value;
-        
-         //getting value of date
+    const {inicio, setInicio} = useContext(DataContext);
+    const {fin, setFin} = useContext(DataContext);
+
+    const guardarFecha=(e)=>{
+        setInicio(e.target.value);  
+    }
+    const guardarFechaFin=(e)=>{
+        setFin(e.target.value);  
     }
     return(
         <div>
@@ -18,12 +21,12 @@ function ModalDate({showw,handleClosee}){
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                     <label for="startDate">Inicio</label>
-                     <input id="startDate" className="form-control" type="date" value='2022-12-17'/>
+                     <label htmlFor="startDate">Inicio</label>
+                     <input onChange={guardarFecha} id="startDate" className="form-control" type="date" value='2022-12-17'/>
                     </div>
                     <div>
-                     <label for="endDate">Fin</label>
-                     <input id="endDate" className="form-control" type="date" />
+                     <label htmlFor="endDate">Fin</label>
+                     <input onChange={guardarFechaFin} id="endDate" className="form-control" type="date" />
                     </div>
                 </Modal.Body>
                     <Modal.Footer>

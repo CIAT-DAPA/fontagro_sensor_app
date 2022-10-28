@@ -69,7 +69,6 @@ function Footer() {
           </div>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in id tempore laboriosam quia quos eius! Eaque nam nostrum possimus tempora, ipsum eligendi cupiditate saepe voluptatem dolore quas, ratione voluptatibus!</p>
     </footer>
   );
 }

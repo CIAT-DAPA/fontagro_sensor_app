@@ -20,7 +20,8 @@ function LoadData(){
     return(
         <div className="">
             <form className='form-data' >
-            <p className="text-form">Por favor carga los datos de tu sensor de humedad presionando Seleccionar archivo</p>
+            <p className="text-form">TuFincaStats</p>
+            <p className="text-form">Carga los datos de tu sensor de humedad presionando Seleccionar archivo</p>
             <div className="form-row"/>
                 <div className="nombre">
                     <label className="label-sensor" htmlFor="inputData">Datos el sensor en formato CSV</label>

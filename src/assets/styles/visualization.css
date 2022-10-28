@@ -49,3 +49,36 @@ p{
 .pmarchitez{
     color: red;
 }
+.jej{
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-dark .carousel-indicators {
+ display: none;
+}
+.colors{
+    display: flex;
+    justify-content: center;
+    
+}
+.baja{
+    width: 20px;
+    height: 20px;
+    background-color: #FFCCCC;
+    border-radius: 20%;
+}
+.media{
+    width: 20px;
+    height: 20px;
+    background-color: #F4E5D2;
+    border-radius: 20%;
+}
+.alta{
+    width: 20px;
+    height: 20px;
+    background-color: #DFF6F9;
+    border-radius: 20%;
+}
+
