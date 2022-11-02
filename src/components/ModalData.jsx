@@ -1,4 +1,4 @@
-import '../assets/styles/modaldate.css'
+
 import {React ,useState, useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -6,15 +6,13 @@ import { DataContext } from '../context/StaticContex';
 function ModalData({show, handleClose}){
   const  {nombreP, setNombreP}= useContext(DataContext);
   const {finca, setFinca} = useContext(DataContext);
-  const mostrarNombre=(e)=>{
+  const mostrarNombre=(e)=>{ 
     setNombreP(e.target.value)
     
   }
   const mostrarFinca=(e)=>{
     setFinca(e.target.value)     
   }
- 
-    
     return(
         <div className='modal'>
             <Modal  show={show} onHide={handleClose}>

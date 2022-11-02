@@ -81,4 +81,7 @@ p{
     background-color: #DFF6F9;
     border-radius: 20%;
 }
-
+.report{
+    display: flex;
+    justify-content: center;
+}

@@ -6,11 +6,6 @@ export function DataContextProvider(props){
     const [inicio, setInicio]= useState('');
     const [fin, setFin]= useState('');
     const [finca, setFinca]= useState('');
-  
-
-
-   /*  const [campo,setCampo]= useState(25)
-    const value= {campo, setCampo}; */
     return(
         <DataContext.Provider value={{contextDatao,setContexDatao, nombreP,setNombreP,finca,setFinca,inicio,setInicio,fin,setFin}} >
             {props.children}

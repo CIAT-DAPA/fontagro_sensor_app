@@ -26,7 +26,7 @@ function ModalCampo({showc, handleClosec}){
         <Modal.Body className='body' >
         <select id='select' className="form-select" aria-label="Default select example">
             <option selected>Seleccione un Suelo</option>
-            <option  className="suelo"  value={'9,4,Arenoso'}>Arenoso</option>
+            <option className="suelo"  value={'9,4,Arenoso'}>Arenoso</option>
             <option className="suelo" value={'14,6,Franco Arenoso'}>Franco Arenoso</option>
             <option className="suelo" value={'22,15,Franca'}>Franca</option>
             <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco Arcilloso</option>

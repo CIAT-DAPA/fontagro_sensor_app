@@ -23,13 +23,14 @@ function NavVisualiation(){
     const [showc, setShowc] = useState(false);
     const handleClosec = () => setShowc(false);
     const handleShowc = () => setShowc(true);
+    
     return(
         <>
         {[false].map((expand) => (
           <Navbar key={expand} bg="light" expand={expand} className="mb-3">
             <Container fluid>
             <Link className="navbar-brand" to="/">
-        <img src={require('../assets/images/logo-fontagro1.png')}  />
+        <img src={require('../assets/images/logo2.png')}  />
       </Link>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
@@ -48,22 +49,13 @@ function NavVisualiation(){
                     <Link onClick={handleShow}className="nav-link" to="">Ingresar datos</Link>
                     <Link onClick={handleShowc} className="nav-link" to="">Seleccionar Suelo</Link>
                     <Link onClick={handleShoww} className="nav-link" to="">Filtrar Datos</Link>
-                    {/* <NavDropdown
-                      title="Seleccione"
-                      id={`offcanvasNavbarDropdown-expand-${expand}`}
-                    >
-                      <NavDropdown.Item  href="">Datos</NavDropdown.Item>
-                      <NavDropdown.Item  href="">
-                        Tipo de Suelos
-                      </NavDropdown.Item>
-                    </NavDropdown> */}
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </Container>
           </Navbar>
         ))}
-        <ModalDate showw={showw} handleClosee={handleClosee} />  
+        <ModalDate showw={showw} handleClosee={handleClosee} /> 
         <ModalData show={show} handleClose={handleClose} />
         <ModalCampo showc={showc} handleClosec={handleClosec} />
       </>

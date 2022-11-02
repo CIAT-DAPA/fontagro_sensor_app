@@ -5,3 +5,7 @@
 .navbar{
     position: fixed;
 }
+img{
+    margin-left: 10px;
+    height: 40px;
+}
