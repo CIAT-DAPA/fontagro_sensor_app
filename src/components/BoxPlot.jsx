@@ -2,6 +2,7 @@
 import {React,useContext} from "react";
 import ReactApexChart from "react-apexcharts";
 import { DataContext } from "../context/StaticContex";
+import '../assets/styles/boxplot.css'
 
 function BoxPlot(){
   const { contextDatao } = useContext(DataContext);
@@ -20,7 +21,6 @@ const data = localStorage.getItem("datos");
   porcentaje.shift();
   fechas.shift();
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
-  console.log(porcentajeFLoat[1023])
   //array ascendente
   const arrayAsc= porcent=>  porcentajeFLoat.sort((a,b)=>a-b);
   //suma del array
@@ -32,14 +32,6 @@ const data = localStorage.getItem("datos");
   const max= porcent=> Math.max(...porcentajeFLoat)
   //valor minimo
   const min= porcent=> Math.min(...porcentajeFLoat)
-
-  // sample standard deviation
-/* const std = (arr) => {
-  const mu = mean(arr);
-  const diffArr = arr.map(a => (a - mu) ** 2);
-  return Math.sqrt(sum(diffArr) / (arr.length - 1));
-}; */
-
 const quantile = (porcentajeFLoat, q) => {
   const sorted = arrayAsc(porcentajeFLoat);
   const pos = (sorted.length - 1) * q;
@@ -60,29 +52,18 @@ const q50 = porcent => quantile(porcentajeFLoat, .50);
 const q75 = porcent => quantile(porcentajeFLoat, .75);
 
 const median = porcent => q50(porcentajeFLoat);
-console.log(arrayAsc())
-console.log(media())
-console.log(q25())
-console.log(median())
-console.log(q75())
-console.log(max())
-console.log(min())
-  
-  
-
     const series= [
         {
           type: 'boxPlot',
           data: [
-           
-            
-            
+      
             {
               x: `Estadisticas entre ${fechas[0]} y ${fechas.at(-1)}`,
               y: [min(), q25(), median(), q75(),max() ]
-            },
+            }
             
           ]
+         
         }
       ]
      const  options= {
@@ -106,7 +87,10 @@ console.log(min())
       }
     
       return(
-        <ReactApexChart options={options} series={series} type="boxPlot" height={350} />
+        <div id="chart">
+          <ReactApexChart options={options} series={series} type="boxPlot" height={350}  />
+        </div>
+        
     )
     
     };

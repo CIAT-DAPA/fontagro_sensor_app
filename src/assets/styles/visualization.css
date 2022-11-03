@@ -5,7 +5,7 @@ p{
     font-size: 15px;
     text-align: center;
     color:  black;
-    font-weight: bold;
+    
 }
 .button-container{
     display: flex;
@@ -26,10 +26,7 @@ p{
         width: 300px;
         
     } 
-    .btn-pdf{
-        position: absolute;
-        bottom: 100px;
-    }
+    
 }
 
 .chart{
@@ -90,4 +87,8 @@ p{
     text-align: left;
     margin-left: 10px;
 
+}
+.info{
+    text-align: left;
+    margin-left: 10px;
 }

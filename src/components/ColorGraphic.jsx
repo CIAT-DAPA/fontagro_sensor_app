@@ -13,34 +13,12 @@ function ColorGraphic(){
   const hasfilter= inicio && fin;
 
   const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
-  console.log(hasfilter)
+
 
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
   porcentaje.shift();
   fechas.shift();
-
-  /* console.log(fechas)
-  console.log(porcentaje) */
- /*  const getData = () => {
-    for (let i = 0; i < datos.data.length; i++) {
-      fechas.push(datos.data[i].Fecha);
-      porcentaje.push(datos.data[i].SW10);
-    }
-  }; 
-  getData();
-  porcentaje.shift();
-  fechas.shift();
-  const fechasconvertidas= fechas.map(fecha=> new Date(fecha))
-  console.log(fechasconvertidas)
-  
-  console.log(fechas)
- console.log(ini)
- console.log(fi)
-  const porcentajet= porcentaje.map(porcent=>parseFloat(porcent));
-  //console.log(porcentajet)
-  const filterDates= fechas.filter(fecha=>new Date(fecha) > ini && new Date(fecha) <=fi) */
-  //console.log(filterDates)
   const series = [
     {
       name: "Porcentaje Humedad",
@@ -83,7 +61,7 @@ function ColorGraphic(){
     yaxis: [
       {
         title: {
-          text: "Porcentaje de Humedad",
+          text: "Porcentaje de Humedad (%) ",
         },
         max: 60,
         min: 0,

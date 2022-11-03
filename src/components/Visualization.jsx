@@ -8,7 +8,10 @@ import BoxPlot from "./BoxPlot";
 function LoadDatatwo() {
   let tituloGrafica = "";
   let tituloGeneral = "";
-  let tituloInicio='Ingrese sus datos e ingrese su tipo de campo presionando en el menu, parte superior derecha';
+  let nombreFinca= "";
+  let periodoDeTiempo=''
+
+  let tituloInicio='Lo invitamos a ingresar sus datos y seleccionar su tipo de campo en el menu, parte superior derecha';
   const { contextDatao } = useContext(DataContext);
   const { nombreP } = useContext(DataContext);
   const { finca } = useContext(DataContext);
@@ -26,26 +29,30 @@ function LoadDatatwo() {
   porcentaje.shift();
   fechas.shift();
   if (contextDatao[2] != undefined) {
-    tituloGrafica = `Tipo de Suelo de la finca:  ${contextDatao[2]}`;
+    tituloGrafica = `Textura del suelo :  ${contextDatao[2]}`;
     tituloInicio=''
+    periodoDeTiempo=`Periodo de tiempo: ${fechas[0]} -- ${fechas.at(-1)}`
   } else {
     tituloGrafica = "";
   }
-  if (nombreP != "" && finca != "") {
-    tituloGeneral = `Usuario:  ${nombreP},  el comportamiento  de humedad de la finca:  ${finca} en el periodo ${
-      fechas[0]
-    } hasta el ${fechas.at(-1)}  fue el siguiente: `;
+  if (nombreP != "" ) {
+    tituloGeneral = `Nombre del Productor :  ${nombreP}`;
     tituloInicio=''
   } else {
     tituloGeneral = "";
   }
+  finca!="" ?  nombreFinca= `Nombre de la Finca:  ${finca}`  : nombreFinca="" ;
+  console.log()
   return (
     <div className="container-fluid">
       <>
-      <p>{tituloInicio}</p>
-      
-      <p className="titulo-grafica">{tituloGrafica} </p>
+      <p className="info">{tituloInicio}</p>
+      <p className="info">Informacion General</p>
       <p className="titulo-general">{tituloGeneral}</p>
+      <p className="titulo-general">{nombreFinca}</p>
+      <p className="titulo-grafica">{tituloGrafica} </p>
+      <p className="titulo-grafica">{periodoDeTiempo} </p>
+
       
           <ColorGraphic />
           <BoxPlot />

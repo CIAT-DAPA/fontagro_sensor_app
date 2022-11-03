@@ -8,14 +8,13 @@ import { useState } from "react";
 import DownloadPdf from "./components/Donwload";
 import { DataContextProvider } from "./context/StaticContex";
 import { Route, Routes } from "react-router-dom";
-import ColorGraphic from "./components/ColorGraphic";
-import GraficaLinea from "./components/GraficaLinea";
-import BoxPlot from "./components/BoxPlot";
+import ShowAbout from "./components/About";
 function App() {
   return (
     <>
       <DataContextProvider>
-        <div className="App " id="pagetodownload" >
+        <div className="App container-fluid " id="pagetodownload" >
+          {/* <ShowAbout /> */}
           <Routes>
             <Route path="/" element={<><Header /> <LoadData /> <Footer /></> }></Route>
             <Route path="/visualization"element={

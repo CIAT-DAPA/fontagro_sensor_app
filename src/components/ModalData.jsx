@@ -29,7 +29,6 @@ function ModalData({show, handleClose}){
             <input onChange={mostrarFinca} type="text" className="form-control" id="inputfinca"  /> 
             </div>
             
-            
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose} >

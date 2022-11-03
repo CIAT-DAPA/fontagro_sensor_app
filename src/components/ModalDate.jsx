@@ -28,7 +28,6 @@ function ModalDate({showw,handleClosee}){
     }
     const valueStart= new Date(fechas[0]).toISOString().split('T')[0]
     const valueEnd= new Date(fechas.at(-1)).toISOString().split('T')[0]
-    console.log(fechas)
     return(
         <div>
             <Modal show={showw} onHide={handleClosee}>
