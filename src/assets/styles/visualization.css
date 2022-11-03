@@ -1,9 +1,4 @@
-.plots-container{
 
-    /* height: 70vh;
-    margin: 0 auto; */
-    
-}
 p{
     
     margin-bottom: 50px;
@@ -84,4 +79,15 @@ p{
 .report{
     display: flex;
     justify-content: center;
+}
+ .titulo-grafica{
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+.titulo-general{
+    text-align: left;
+    margin-left: 10px;
+
 }

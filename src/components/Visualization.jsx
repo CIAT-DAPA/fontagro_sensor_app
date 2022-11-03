@@ -1,10 +1,9 @@
 import { React, useContext, useState } from "react";
 import "../assets/styles/visualization.css";
-import Carousel from "react-bootstrap/Carousel";
 import { DataContext } from "../context/StaticContex";
 import ColorGraphic from "./ColorGraphic";
 import DownloadPdf from "./Donwload";
-import GraficaLinea from "./GraficaLinea";
+import ShowTable from "./Table";
 import BoxPlot from "./BoxPlot";
 function LoadDatatwo() {
   let tituloGrafica = "";
@@ -41,27 +40,21 @@ function LoadDatatwo() {
     tituloGeneral = "";
   }
   return (
-    <>
+    <div className="container-fluid">
+      <>
       <p>{tituloInicio}</p>
-      <p>{tituloGrafica} </p>
-      <p>{tituloGeneral}</p>
-            
-      <Carousel variant="dark">
-        <Carousel.Item className="jej">
-          <ColorGraphic />
-        </Carousel.Item>
-       {/*  <Carousel.Item className="jej">
-          <BoxPlot />
-        </Carousel.Item> */}
-      </Carousel>
       
+      <p className="titulo-grafica">{tituloGrafica} </p>
+      <p className="titulo-general">{tituloGeneral}</p>
+      
+          <ColorGraphic />
+          <BoxPlot />
       <div className="plots-container">
         <p></p>
         <div id="chart">
-          <p>
-            En la grafica puede ver el comportamiento de la humedad de suelo en
+        <p>En la graficas puede ver el comportamiento de la humedad de suelo en
             el tiempo, al ingresar el tipo de campo de su finca, podra
-            visualizar dos lineas que represetan los limites de humedad aptos para su suelo.
+            visualizar dos lineas que represetan los limites de humedad aptos para su suelo, adicionalmente abajo puede visualizar las estadisticas en el periodo de tiempo que estuvo instalado el sensor.
           </p>
           <div className="colors">
             <div className="baja"></div> <p className="humedad">Humedad Baja</p>
@@ -75,7 +68,9 @@ function LoadDatatwo() {
 
         </div>
       </div>
-    </>
+      </>
+    </div>
+    
   );
 }
 export default LoadDatatwo;

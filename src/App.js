@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <DataContextProvider>
-        <div className="App " id="pagetodownload">
+        <div className="App " id="pagetodownload" >
           <Routes>
             <Route path="/" element={<><Header /> <LoadData /> <Footer /></> }></Route>
             <Route path="/visualization"element={
