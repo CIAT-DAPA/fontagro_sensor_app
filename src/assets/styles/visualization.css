@@ -3,7 +3,7 @@ p{
     
     margin-bottom: 50px;
     font-size: 15px;
-    text-align: center;
+    
     color:  black;
     
 }
@@ -64,13 +64,13 @@ p{
 .media{
     width: 20px;
     height: 20px;
-    background-color: #F4E5D2;
+    background-color: #C2E6DA;
     border-radius: 20%;
 }
 .alta{
     width: 20px;
     height: 20px;
-    background-color: #DFF6F9;
+    background-color: #D0E8FA;
     border-radius: 20%;
 }
 .report{
@@ -91,4 +91,12 @@ p{
 .info{
     text-align: left;
     margin-left: 10px;
+}
+.info-general{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.grafica-titulo{
+    text-align: center;
+    font-weight: bold;
 }

@@ -56,13 +56,19 @@ const median = porcent => q50(porcentajeFLoat);
         {
           type: 'boxPlot',
           data: [
-      
-            {
-              x: `Estadisticas entre ${fechas[0]} y ${fechas.at(-1)}`,
-              y: [min(), q25(), median(), q75(),max() ]
-            }
             
-          ]
+            {
+              x: `Estadisticas `,
+              y: [min(), q25(), median(), q75(),max() ],
+            },
+            
+           
+            
+
+            
+            
+          ],
+          
          
         }
       ]
@@ -72,8 +78,7 @@ const median = porcent => q50(porcentajeFLoat);
           height: 350
         },
         title: {
-          text: 'Estadisticas',
-          align: 'left'
+          
         },
         plotOptions: {
           boxPlot: {
@@ -82,6 +87,28 @@ const median = porcent => q50(porcentajeFLoat);
               lower: '#A5978B'
             }
           }
+        },
+        yaxis: [
+          {
+            title: {
+              text: "Porcentaje de Humedad (%)",
+            },
+            
+          },
+        ],
+        xaxis: {
+          title: {
+            text: "Fechas",
+            
+          },
+          
+    
+          
+        },
+        tooltip: {
+          x: {
+            format: "dd-MM-yy HH:mm",
+          },
         },
         
       }

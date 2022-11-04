@@ -61,7 +61,7 @@ function ColorGraphic(){
     yaxis: [
       {
         title: {
-          text: "Porcentaje de Humedad (%) ",
+          text: "Porcentaje de Humedad (%)",
         },
         max: 60,
         min: 0,
@@ -99,14 +99,14 @@ function ColorGraphic(){
           y2: contextDatao[1],
 
           borderColor: "#000",
-          fillColor: "#c87b20",
+          fillColor: "#00E396",
           opacity: 0.2,
           label: {
             borderColor: "#333",
             style: {
               fontSize: "10px",
               color: "#333",
-              background: "#FEB019",
+              background: "#00E396",
             },
           },
         },
@@ -131,14 +131,14 @@ function ColorGraphic(){
           y2: 60,
 
           borderColor: "#000",
-          fillColor: "#5dd0e3",
+          fillColor: "#128ae6",
           opacity: 0.2,
           label: {
             borderColor: "#333",
             style: {
               fontSize: "10px",
               color: "#333",
-              background: "#FEB019",
+              background: "#128ae6",
             },
           },
         }

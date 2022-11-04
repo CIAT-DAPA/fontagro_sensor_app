@@ -1,11 +1,9 @@
 import {React, useState} from "react";
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import ShowAbout from "./About";
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from "react-router-dom"
 import ModalData from "./ModalData";
@@ -68,6 +66,8 @@ function NavVisualiation(){
         <ModalCampo showc={showc} handleClosec={handleClosec} />
         <ShowAbout showa={showa} handleClosea={handleClosea} />
       </>
+      
+        
       
        
     )

@@ -10,7 +10,7 @@ function LoadDatatwo() {
   let tituloGeneral = "";
   let nombreFinca= "";
   let periodoDeTiempo=''
-
+  let infoGeneral=''
   let tituloInicio='Lo invitamos a ingresar sus datos y seleccionar su tipo de campo en el menu, parte superior derecha';
   const { contextDatao } = useContext(DataContext);
   const { nombreP } = useContext(DataContext);
@@ -42,20 +42,30 @@ function LoadDatatwo() {
     tituloGeneral = "";
   }
   finca!="" ?  nombreFinca= `Nombre de la Finca:  ${finca}`  : nombreFinca="" ;
+  finca!="" ?  infoGeneral= `Infomación General` : nombreP!="" ?  infoGeneral= `Infomación General`: contextDatao[2]!= undefined? infoGeneral= `Infomación General`: nombreFinca="" ;
   console.log()
   return (
     <div className="container-fluid">
       <>
       <p className="info">{tituloInicio}</p>
-      <p className="info">Informacion General</p>
+      <p className="info-general">{infoGeneral}</p>
       <p className="titulo-general">{tituloGeneral}</p>
       <p className="titulo-general">{nombreFinca}</p>
       <p className="titulo-grafica">{tituloGrafica} </p>
       <p className="titulo-grafica">{periodoDeTiempo} </p>
 
-      
-          <ColorGraphic />
-          <BoxPlot />
+      <div>
+        <p className="grafica-titulo">Porcentaje de humedad</p>
+        <p className="info">En la siguiente grafica puede observar la información sobre la humedad del suelo obtenida por el sensor</p>
+      <ColorGraphic />
+
+      </div>
+      <div className="grafica-titulo">
+        <p>Variabilidad del porcentaje de humedad</p>
+        
+      <BoxPlot />
+
+      </div>
       <div className="plots-container">
         <p></p>
         <div id="chart">
