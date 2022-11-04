@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fontagro_sensor_app/static/css/main.adfe06dc.css",
-    "main.js": "/fontagro_sensor_app/static/js/main.01afba55.js",
+    "main.css": "/fontagro_sensor_app/static/css/main.11564422.css",
+    "main.js": "/fontagro_sensor_app/static/js/main.a18a05aa.js",
     "static/js/703.2c952b5b.chunk.js": "/fontagro_sensor_app/static/js/703.2c952b5b.chunk.js",
     "static/js/27.6a311fc6.chunk.js": "/fontagro_sensor_app/static/js/27.6a311fc6.chunk.js",
     "static/media/background-data-user.jpg": "/fontagro_sensor_app/static/media/background-data-user.dba68cb1ca080ea9860a.jpg",
@@ -9,13 +9,13 @@
     "static/media/logo-ciat.png": "/fontagro_sensor_app/static/media/logo-ciat.9ff4996f25c3c24535b4.png",
     "static/media/logo-fontagro1.png": "/fontagro_sensor_app/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
     "index.html": "/fontagro_sensor_app/index.html",
-    "main.adfe06dc.css.map": "/fontagro_sensor_app/static/css/main.adfe06dc.css.map",
-    "main.01afba55.js.map": "/fontagro_sensor_app/static/js/main.01afba55.js.map",
+    "main.11564422.css.map": "/fontagro_sensor_app/static/css/main.11564422.css.map",
+    "main.a18a05aa.js.map": "/fontagro_sensor_app/static/js/main.a18a05aa.js.map",
     "703.2c952b5b.chunk.js.map": "/fontagro_sensor_app/static/js/703.2c952b5b.chunk.js.map",
     "27.6a311fc6.chunk.js.map": "/fontagro_sensor_app/static/js/27.6a311fc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adfe06dc.css",
-    "static/js/main.01afba55.js"
+    "static/css/main.11564422.css",
+    "static/js/main.a18a05aa.js"
   ]
 }
