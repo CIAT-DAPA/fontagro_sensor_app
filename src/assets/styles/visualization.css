@@ -100,3 +100,8 @@ p{
     text-align: center;
     font-weight: bold;
 }
+.boxplot-text{
+    text-align: left;
+    font-weight: 500;
+    margin-left: 10px;
+}

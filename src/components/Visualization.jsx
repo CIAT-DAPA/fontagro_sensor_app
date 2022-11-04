@@ -28,6 +28,11 @@ function LoadDatatwo() {
   getData();
   porcentaje.shift();
   fechas.shift();
+  
+
+
+
+
   if (contextDatao[2] != undefined) {
     tituloGrafica = `Textura del suelo :  ${contextDatao[2]}`;
     tituloInicio=''
@@ -62,6 +67,7 @@ function LoadDatatwo() {
       </div>
       <div className="grafica-titulo">
         <p>Variabilidad del porcentaje de humedad</p>
+        <p className="boxplot-text">En la siguiene grafica puede ver las estadisticas de humedad de suelo en los siete dias de la semana</p>
         
       <BoxPlot />
 
@@ -82,7 +88,6 @@ function LoadDatatwo() {
           <DownloadPdf rootElementId={'pagetodownload'} DownloadFileName='testPage' />
 
           </div>
-
         </div>
       </div>
       </>
