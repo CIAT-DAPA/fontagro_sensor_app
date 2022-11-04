@@ -19,7 +19,7 @@ function LoadData(){
     } 
     return(
         <div className="">
-            <form className='form-data' >
+            <form className='form-data ' >
             <p className="text-form">TuFincaStats</p>
             <p className="text-form">Carga los datos de tu sensor de humedad presionando Seleccionar archivo</p>
             <div className="form-row"/>
