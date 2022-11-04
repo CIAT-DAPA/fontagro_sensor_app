@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <DataContextProvider>
-        <div className="App container-fluid p-0" id="pagetodownload " >
+        <div className="App w3-container" id="pagetodownload " >
           {/* <ShowAbout /> */}
           <Routes>
             <Route path="/" element={<><Header /> <LoadData /> <Footer /></> }></Route>
