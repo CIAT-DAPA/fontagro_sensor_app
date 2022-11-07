@@ -302,6 +302,7 @@ const mediand = porcent => q50d(domingo);
               text: "Porcentaje de Humedad (%)",
             },
             
+            
           },
         ],
         xaxis: {
@@ -318,8 +319,92 @@ const mediand = porcent => q50d(domingo);
             format: "dd-MM-yy HH:mm",
           },
         },
+        annotations: {
+          yaxis: [
+            {
+              y: contextDatao[0],
+              borderColor: "#00E396",
+              label: {
+                borderColor: "#00E396",
+                style: {
+                  color: "#fff",
+                  background: "#00E396",
+                },
+                text: "Capacidad de campo",
+              },
+            },
+            {
+              y: contextDatao[1],
+              borderColor: "red",
+              label: {
+                borderColor: "red",
+                style: {
+                  color: "#fff",
+                  background: "red",
+                },
+                text: "Punto de marchitez",
+                
+              },
+            },
+            {
+              y: contextDatao[0],
+              y2: contextDatao[1],
+    
+              borderColor: "#000",
+              fillColor: "#00E396",
+              opacity: 0.2,
+              label: {
+                borderColor: "#333",
+                style: {
+                  fontSize: "10px",
+                  color: "#333",
+                  background: "#00E396",
+                },
+              },
+            },
+            {
+              y: contextDatao[1],
+              y2: 0,
+    
+              borderColor: "#000",
+              fillColor: "red",
+              opacity: 0.2,
+              label: {
+                borderColor: "#333",
+                style: {
+                  fontSize: "10px",
+                  color: "#333",
+                  background: "#FEB019",
+                },
+              },
+            },
+            {
+              y: contextDatao[0],
+              y2: 60,
+    
+              borderColor: "#000",
+              fillColor: "#128ae6",
+              opacity: 0.2,
+              label: {
+                borderColor: "#333",
+                style: {
+                  fontSize: "10px",
+                  color: "#333",
+                  background: "#128ae6",
+                },
+              },
+            }
+          ],
+        },
         
       }
+      
+      
+       if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
+        options.yaxis[0]['min'] = 0
+        options.yaxis[0]['max'] = 60 
+       }
+      
     
       return(
         <div id="chart">
