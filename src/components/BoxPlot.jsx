@@ -268,13 +268,6 @@ const mediand = porcent => q50d(domingo);
               x: `Domingo`,
               y: [minDomingoo(), q25d(), mediand(), q75d(),maxDomingo() ],
             }
-            
-            
-           
-            
-
-            
-            
           ],
           
          

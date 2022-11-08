@@ -13,8 +13,6 @@ function DownloadPdf({rootElementId,DownloadFileName}){
         })
         
     }
-
-
     return(
         <button className="download" onClick={downloadFileDocument}>Descargar Reporte</button>
     )

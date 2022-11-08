@@ -15,6 +15,7 @@ function LoadDatatwo() {
   const { contextDatao } = useContext(DataContext);
   const { nombreP } = useContext(DataContext);
   const { finca } = useContext(DataContext);
+  const { json } = useContext(DataContext);
   const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
   const fechas = [];
@@ -28,11 +29,6 @@ function LoadDatatwo() {
   getData();
   porcentaje.shift();
   fechas.shift();
-  
-
-
-
-
   if (contextDatao[2] != undefined) {
     tituloGrafica = `Textura del suelo :  ${contextDatao[2]}`;
     tituloInicio=''
@@ -70,6 +66,7 @@ function LoadDatatwo() {
         <p className="boxplot-text">En la siguiene grafica puede ver las estadisticas de humedad de suelo en los siete dias de la semana</p>
         
       <BoxPlot />
+      {/* <ShowTable /> */}
 
       </div>
       <div className="plots-container">
@@ -92,7 +89,6 @@ function LoadDatatwo() {
       </div>
       </>
     </div>
-    
   );
 }
 export default LoadDatatwo;

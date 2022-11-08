@@ -1,9 +1,13 @@
-import {React, useState} from "react";
+import {React, useState, useContext} from "react";
 import '../assets/styles/inputdata.css'
 import {Link} from "react-router-dom"
 import Papa from 'papaparse';
+import { DataContext } from "../context/StaticContex";
+
 
 function LoadData(){
+const {json, setJson} = useContext(DataContext);
+
     const valores =(e)=>{
         e.preventDefault()
             Papa.parse(document.getElementById('inputdata').files[0],{
@@ -14,6 +18,7 @@ function LoadData(){
                     const datos= results
                     console.log(datos); 
                     localStorage.setItem('datos',JSON.stringify(datos)) 
+                    setJson(datos)
                 }
             });     
     } 

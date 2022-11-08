@@ -6,8 +6,9 @@ export function DataContextProvider(props){
     const [inicio, setInicio]= useState('');
     const [fin, setFin]= useState('');
     const [finca, setFinca]= useState('');
+    const [json, setJson]= useState('');
     return(
-        <DataContext.Provider value={{contextDatao,setContexDatao, nombreP,setNombreP,finca,setFinca,inicio,setInicio,fin,setFin}} >
+        <DataContext.Provider value={{contextDatao,setContexDatao, nombreP,setNombreP,finca,setFinca,inicio,setInicio,fin,setFin,json,setJson}} >
             {props.children}
             </DataContext.Provider>
     )

@@ -1,32 +1,67 @@
-import React from "react";
+import {React,useEffect} from "react";
+import Table from 'react-bootstrap/Table';
 function ShowTable(){
     const data = localStorage.getItem("datos");
     const datos = JSON.parse(data);
-    console.log(datos.data[1].Fecha)
+    const fechas = [];
+  const porcentaje = [];
+  const getData = () => {
+    for (let i = 0; i < datos.data.length; i++) {
+      fechas.push(datos.data[i].Fecha);
+      porcentaje.push(datos.data[i].SW10);
+    }
+  };
+  getData();
+  porcentaje.shift();
+  fechas.shift();
+  const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
+  const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
+  console.log(prom().toFixed(2))
+  
+
+  
+
+
+    useEffect(() => {
+        // 👇️ call method in useEffect hook
+       /*  let el = document.getElementById('hi');
+
+        let holad= document.createElement('thead');
+        el.appendChild(holad)
+        console.log(el); */
+      }, []);
+    
     
     return(
-        <table className="table table-striped">
-            <tr className="bg-info">
-                <th>Fechas</th>
-                <th>Porcentaje Humedad</th>
-            </tr>
-            <tbody id="myTable"></tbody>
-        </table>
+        <div className="table-responsive">
+            <Table id="hi" striped  >
+            <thead>
+        <tr>
+          <th>Fecha Inicio</th>
+          <th>Fecha Fin</th>
+          <th>Promedio General</th>
+          <th>Humedad Maxima</th>
+          <th>Humead Minima</th>
+          <th>Promedio General</th>
+          <th>Promedio General</th>
+          <th>Promedio General</th>
+        </tr>
+      </thead>
+        
+        <tbody>
+          <tr>
+            <td>{fechas[0]}</td>
+            <td>{fechas.at(-1)}</td>
+            <td>{prom().toFixed(2)}</td>
+            <td>{Math.max(...porcentajeFLoat)}</td>
+            <td>{Math.min(...porcentajeFLoat)}</td>
+          </tr>
+        </tbody>
+      </Table>
+        </div>
+        
     )
-    const buldTable=()=>{
-        var table= document.getElementById('myTable')
-            
-    
-            for (let i=0; i<datos.data.length;i++){
-                let row=`
-                <tr>
-                    <td> ${datos.data[1].Fecha}<td/>
-                    <td> ${datos.data[4].SW10}<td/>
-                <tr/>
-                `
-            table.innerHTML= row
-            }
-        }
-    buldTable()
+   
+   
 }
 export default ShowTable;
