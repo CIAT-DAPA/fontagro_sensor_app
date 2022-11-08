@@ -6,12 +6,19 @@ import { DataContext } from '../context/StaticContex';
 function ModalData({show, handleClose}){
   const  {nombreP, setNombreP}= useContext(DataContext);
   const {finca, setFinca} = useContext(DataContext);
+  const [nombre,setNombre]= useState('')
+  const [finc,setFinc]= useState('')
   const mostrarNombre=(e)=>{ 
-    setNombreP(e.target.value)
+    setNombre(e.target.value)
     
   }
   const mostrarFinca=(e)=>{
-    setFinca(e.target.value)     
+    setFinc(e.target.value)     
+  }
+  const setDatos=()=>{
+    setNombreP(nombre)
+    setFinca(finc)
+    handleClose()
   }
     return(
         <div className='modal'>
@@ -31,10 +38,7 @@ function ModalData({show, handleClose}){
             
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} >
-            Cerrar
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={setDatos}>
             Guardar
           </Button>
         </Modal.Footer>

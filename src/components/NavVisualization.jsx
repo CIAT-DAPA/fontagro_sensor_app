@@ -26,11 +26,7 @@ function NavVisualiation(){
     const [showa, setShowa] = useState(false);
     const handleClosea = () => setShowa(false);
     const handleShowa = () => setShowa(true);
-
-
-    
-    return(
-      
+    return(     
          <>
         {[false].map((expand) => (
           <Navbar key={expand} bg="light" expand={expand} className="mb-3">
@@ -66,10 +62,6 @@ function NavVisualiation(){
         <ModalCampo showc={showc} handleClosec={handleClosec} />
         <ShowAbout showa={showa} handleClosea={handleClosea} />
       </>
-      
-        
-      
-       
     )
 }
 export default NavVisualiation;

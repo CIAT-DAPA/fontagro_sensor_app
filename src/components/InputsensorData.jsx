@@ -7,7 +7,6 @@ import { DataContext } from "../context/StaticContex";
 
 function LoadData(){
 const {json, setJson} = useContext(DataContext);
-
     const valores =(e)=>{
         e.preventDefault()
             Papa.parse(document.getElementById('inputdata').files[0],{
@@ -33,11 +32,11 @@ const {json, setJson} = useContext(DataContext);
                     <input type="file" className="form-control" id="inputdata" accept=".csv" /* onChange={handleChange} *//>     
                 </div>
                 <div className="buttons-container">
+                    
                     <button onClick={valores} className="btns btn-aceptar "><Link to="/visualization">Continuar</Link></button>
                 </div>     
         </form>
-        </div>
-        
+        </div>   
     );
 }
 export default LoadData;

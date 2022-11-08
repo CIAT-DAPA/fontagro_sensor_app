@@ -16,12 +16,7 @@ function ShowTable(){
   fechas.shift();
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
-  console.log(prom().toFixed(2))
   
-
-  
-
-
     useEffect(() => {
         // 👇️ call method in useEffect hook
        /*  let el = document.getElementById('hi');

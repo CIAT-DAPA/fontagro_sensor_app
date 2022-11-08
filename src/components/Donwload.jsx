@@ -1,20 +1,26 @@
 import React from "react";
 import html2canvas from "html2canvas";
 import {jsPDF} from "jspdf";
+import html2pdf from 'html2pdf.js'
 import '../assets/styles/download.css'
-function DownloadPdf({rootElementId,DownloadFileName}){
+function DownloadPdf({rootElementId}){
     const downloadFileDocument= ()=>{
         const input= document.getElementById(rootElementId);
-        html2canvas(input).then((canvas)=>{
-            const imgData= canvas.toDataURL("image/png");
-            const pdf= new jsPDF("p","pt","c2");
-            pdf.addImage(imgData,"JPEG",0,0);
-            pdf.save(`${DownloadFileName}`);
-        })
+       
+        var opt = {
+            margin: 1,
+            filename: 'myfile.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+        html2pdf().from(input).set(opt).save();
         
     }
     return(
-        <button className="download" onClick={downloadFileDocument}>Descargar Reporte</button>
+        
+       /*  <button type="button" className="btn btn-secondary">Descargar Reporte</button> */
+       <button  onClick={downloadFileDocument} type="button" className="btn btn-primary my-4">Descargar Reporte </button>
     )
 }
 export default DownloadPdf;
