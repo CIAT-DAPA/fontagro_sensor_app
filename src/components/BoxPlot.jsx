@@ -314,18 +314,7 @@ const mediand = porcent => q50d(domingo);
         },
         annotations: {
           yaxis: [
-            {
-             
-              borderColor: "#00E396",
-              label: {
-                borderColor: "#00E396",
-                style: {
-                  color: "#fff",
-                  background: "#00E396",
-                },
-                
-              },
-            },
+            
             {
              
               borderColor: "red",
@@ -336,6 +325,18 @@ const mediand = porcent => q50d(domingo);
                   background: "red",
                 },
                
+                
+              },
+            },
+            {
+             
+              borderColor: "#00E396",
+              label: {
+                borderColor: "#00E396",
+                style: {
+                  color: "#fff",
+                  background: "#00E396",
+                },
                 
               },
             },
@@ -398,8 +399,8 @@ const mediand = porcent => q50d(domingo);
         options.yaxis[0]['max'] = 60 
         options.annotations.yaxis[0]['y']=contextDatao[1]
         options.annotations.yaxis[1]['y']=contextDatao[0]
-        options.annotations.yaxis[0].label['text'] = 'Capacidad de campo';
-        options.annotations.yaxis[1].label['text'] = 'Punto de marchitez';
+        options.annotations.yaxis[1].label['text'] = 'Capacidad de campo';
+        options.annotations.yaxis[0].label['text'] = 'Punto de marchitez';
        }
       
     

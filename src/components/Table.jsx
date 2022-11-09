@@ -18,12 +18,18 @@ function ShowTable(){
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
   
     useEffect(() => {
-        // 👇️ call method in useEffect hook
-       /*  let el = document.getElementById('hi');
-
-        let holad= document.createElement('thead');
-        el.appendChild(holad)
-        console.log(el); */
+       const crearTabla=()=>{
+        var table = document.getElementById('my-table');
+        for (let i=0; i<15;i++){
+            var row= `<tr>
+                        <td>${fechas[i]}</td>
+                        <td>${porcentaje[i]}</td>
+                        
+                    </tr>`
+            table.innerHTML+=row;
+        }
+       }
+       crearTabla();
       }, []);
     
     
@@ -38,11 +44,8 @@ function ShowTable(){
         </tr>
       </thead>
         
-        <tbody>
-          <tr>
-            <td>{fechas[0]}</td>
-            <td>{fechas.at(-1)}</td>
-          </tr>
+        <tbody id="my-table">
+          
         </tbody>
       </Table>
         </div>

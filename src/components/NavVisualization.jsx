@@ -47,8 +47,8 @@ function NavVisualiation(){
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Link onClick={handleShow}className="nav-link" to="">Datos de la finca</Link>
-                    <Link onClick={handleShowc} className="nav-link" to="">Textura Del suelo</Link>
-                    <Link onClick={handleShoww} className="nav-link" to="">Filtrar Datos</Link>
+                    <Link onClick={handleShowc} className="nav-link" to="">Textura del suelo</Link>
+                    <Link onClick={handleShoww} className="nav-link" to="">Filtrar datos</Link>
                     <Link onClick={handleShowa} className="nav-link" to="">Acerca de</Link>
                   </Nav>
                 </Offcanvas.Body>

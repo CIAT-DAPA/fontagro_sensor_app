@@ -70,18 +70,7 @@ function ColorGraphic(){
 
     annotations: {
       yaxis: [
-        {
-          
-          borderColor: "#00E396",
-          label: {
-            borderColor: "#00E396",
-            style: {
-              color: "#fff",
-              background: "#00E396",
-            },
-            
-          },
-        },
+       
         {
           
           borderColor: "red",
@@ -90,6 +79,18 @@ function ColorGraphic(){
             style: {
               color: "#fff",
               background: "red",
+            },
+            
+          },
+        },
+        {
+          
+          borderColor: "#00E396",
+          label: {
+            borderColor: "#00E396",
+            style: {
+              color: "#fff",
+              background: "#00E396",
             },
             
           },
@@ -150,8 +151,8 @@ function ColorGraphic(){
 if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
   options.annotations.yaxis[0]['y']=contextDatao[1]
   options.annotations.yaxis[1]['y']=contextDatao[0]
-  options.annotations.yaxis[0].label['text'] = 'Capacidad de campo';
-  options.annotations.yaxis[1].label['text'] = 'Punto de Marchitez';
+  options.annotations.yaxis[1].label['text'] = 'Capacidad de campo';
+  options.annotations.yaxis[0].label['text'] = 'Punto de Marchitez';
  }
     return(
         <ReactApexChart
