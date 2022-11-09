@@ -109,7 +109,7 @@ function LoadDatatwo() {
         </div>
         <p className="boxplot-text">En la siguiene tabla puede ver las estadisticas de humedad de suelo en el tiempo </p>
         
-      <ShowTable />
+      {/* <ShowTable /> */}
 
 
       </div>
