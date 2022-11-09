@@ -86,7 +86,7 @@ function LoadDatatwo() {
       </div>
         </div>
         
-      <div className="grafica-titulo card p-4 mt-4 shadow-sm  mb-5 bg-body rounded">
+      <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
         <p>Variabilidad del porcentaje de humedad</p>
 
@@ -98,9 +98,25 @@ function LoadDatatwo() {
             <div className="alta" ></div><p className="humedad">Suelo Saturado</p>
           </div>
       <BoxPlot />
-      {/* <ShowTable /> */}
+
 
       </div>
+        
+    {/*   <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
+        <div className="card-header mb-2">
+        <p>Variabilidad del porcentaje de humedad</p>
+
+        </div>
+        <p className="boxplot-text">En la siguiene grafica puede ver las estadisticas de humedad de suelo en los siete dias de la semana</p>
+        <div className="colors">
+            <div className="baja"></div> <p className="humedad">Humedad Baja</p>
+            <div className="media"></div><p className="humedad"> Humedad ideal</p>
+            <div className="alta" ></div><p className="humedad">Suelo Saturado</p>
+          </div>
+      <ShowTable />
+
+
+      </div> */}
       <div className="plots-container">
         <p></p>
         <div id="chart">

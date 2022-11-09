@@ -3,10 +3,8 @@ import "../assets/styles/footer.css";
 function Footer() {
   return (
     <footer id="footer" className="footer-1">
-      <p className="text-partners">Participantes</p>
-      
+      <p className="text-partners">Participantes</p>  
       <div className="main-footer widgets-dark typo-light">
-        {/* <h5 className="participntes">Participantes Principales</h5> */}
         <div className="container">
         
           <div className="row">
@@ -33,12 +31,8 @@ function Footer() {
                   src={require("../assets/images/logo-visualiti.png")}
                 />
                 </a>
-               
-                
-                
               </div>
             </div>
-
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget no-box">
                 <h5 className="">
@@ -50,7 +44,6 @@ function Footer() {
                 /></a>
               </div>
             </div>
-
             <div className="col-xs-12 col-sm-6 col-md-3">
               <div className="widget no-box">
                 <h5 className="">

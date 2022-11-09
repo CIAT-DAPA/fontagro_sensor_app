@@ -32,14 +32,9 @@ function ShowTable(){
             <Table id="hi" striped  >
             <thead>
         <tr>
-          <th>Fecha Inicio</th>
-          <th>Fecha Fin</th>
-          <th>Promedio General</th>
-          <th>Humedad Maxima</th>
-          <th>Humead Minima</th>
-          <th>Promedio General</th>
-          <th>Promedio General</th>
-          <th>Promedio General</th>
+          <th>Fechas</th>
+          <th>Porcentaje de Humedad</th>
+          
         </tr>
       </thead>
         
@@ -47,9 +42,6 @@ function ShowTable(){
           <tr>
             <td>{fechas[0]}</td>
             <td>{fechas.at(-1)}</td>
-            <td>{prom().toFixed(2)}</td>
-            <td>{Math.max(...porcentajeFLoat)}</td>
-            <td>{Math.min(...porcentajeFLoat)}</td>
           </tr>
         </tbody>
       </Table>
