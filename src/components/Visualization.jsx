@@ -102,17 +102,17 @@ function LoadDatatwo() {
 
       </div>
         
-      <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
+      {/* <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
         <p>Tabla de datos en el tiempo (probando con pocos datos)</p>
 
         </div>
         <p className="boxplot-text">En la siguiene tabla puede ver las estadisticas de humedad de suelo en el tiempo </p>
         
-      {/* <ShowTable /> */}
+      <ShowTable />
 
 
-      </div>
+      </div> */}
       <div className="plots-container">
         <p></p>
         <div id="chart">

@@ -317,12 +317,12 @@ const mediand = porcent => q50d(domingo);
             
             {
              
-              borderColor: "red",
+              borderColor: "",
               label: {
-                borderColor: "red",
+                borderColor: "",
                 style: {
                   color: "#fff",
-                  background: "red",
+                  background: "",
                 },
                
                 
@@ -330,12 +330,12 @@ const mediand = porcent => q50d(domingo);
             },
             {
              
-              borderColor: "#00E396",
+              borderColor: "",
               label: {
-                borderColor: "#00E396",
+                borderColor: "",
                 style: {
                   color: "#fff",
-                  background: "#00E396",
+                  background: "",
                 },
                 
               },
@@ -392,11 +392,21 @@ const mediand = porcent => q50d(domingo);
         },
         
       }
-      
+      console.log(options.annotations.yaxis[0])
       
        if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
+        
         options.yaxis[0]['min'] = 0
         options.yaxis[0]['max'] = 60 
+        options.annotations.yaxis[0].borderColor='red'
+        options.annotations.yaxis[0].label.borderColor='red'
+        options.annotations.yaxis[0].label.style.background='red'
+        options.annotations.yaxis[1].borderColor='#00E396'
+        options.annotations.yaxis[1].label.borderColor='#00E396'
+        options.annotations.yaxis[1].label.style.background='#00E396'
+        
+
+
         options.annotations.yaxis[0]['y']=contextDatao[1]
         options.annotations.yaxis[1]['y']=contextDatao[0]
         options.annotations.yaxis[1].label['text'] = 'Capacidad de campo';
