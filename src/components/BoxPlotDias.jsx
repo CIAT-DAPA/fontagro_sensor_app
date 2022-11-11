@@ -14,8 +14,18 @@ function BoxPlotDias(){
   getData();
   porcentaje.shift();
   fechas.shift();
+  const fechasSinNumero=[]
   const fechasEnDias= fechas.map(fecha=>new Date(fecha));
-  console.log(fechas)
+  for(let i =0; i<fechas.length;i++){
+    fechasSinNumero.push(fechas[i].slice(0,9))
+  }
+  /* for(let i=0; i<50;i++){
+    console.log(porcentaje[i])
+  } */
+  /* for(i=0; i<fechas.length; i++){
+    fechas[i].
+  } */
+  console.log(datos)
     return(
         <p></p>
     )

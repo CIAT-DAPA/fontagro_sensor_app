@@ -300,7 +300,7 @@ const mediand = porcent => q50d(domingo);
         ],
         xaxis: {
           title: {
-            text: "Dias de la Semana",
+            text: "Dias de la semana",
             
           },
           
@@ -404,9 +404,6 @@ const mediand = porcent => q50d(domingo);
         options.annotations.yaxis[1].borderColor='#00E396'
         options.annotations.yaxis[1].label.borderColor='#00E396'
         options.annotations.yaxis[1].label.style.background='#00E396'
-        
-
-
         options.annotations.yaxis[0]['y']=contextDatao[1]
         options.annotations.yaxis[1]['y']=contextDatao[0]
         options.annotations.yaxis[1].label['text'] = 'Capacidad de campo';
