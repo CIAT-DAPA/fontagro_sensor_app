@@ -122,7 +122,7 @@ function LoadDatatwo() {
               <p className="humedad">Suelo Saturado</p>
             </div>
             <ColorGraphic />
-            <BoxPlotDias />
+            
           </div>
         </div>
 
@@ -142,6 +142,23 @@ function LoadDatatwo() {
             <p className="humedad">Suelo Saturado</p>
           </div>
           <BoxPlot />
+        </div>
+        <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
+          <div className="card-header mb-2">
+            <p className="">Variabilidad del porcentaje de humedad</p>
+          </div>
+          <p className="boxplot-text">
+            En la siguiene grafica puede ver las estadisticas de humedad de
+            suelo en los dias que estuvo instalado el sensor
+          </p>
+          <div className="colors">
+            <div className="baja"></div> <p className="humedad">Humedad Baja</p>
+            <div className="media"></div>
+            <p className="humedad"> Humedad ideal</p>
+            <div className="alta"></div>
+            <p className="humedad">Suelo Saturado</p>
+          </div>
+          <BoxPlotDias />
         </div>
         
       <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
