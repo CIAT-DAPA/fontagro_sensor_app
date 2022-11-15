@@ -1,6 +1,9 @@
 
-import React from "react";
+import {React,useContext} from "react";
 import ReactApexChart from "react-apexcharts";
+import { DataContext } from "../context/StaticContex";
+
+
 const min= datos=> Math.min(...datos)
 const max= datos=> Math.max(...datos)
 const arrayAsc= datos=>  datos.sort((a,b)=>a-b);
@@ -34,6 +37,8 @@ const getValores=(datos)=>{
 }
 
 function BoxPlotDias(){
+const { contextDatao } = useContext(DataContext);
+
 
   
   const data = localStorage.getItem("datos");
@@ -99,6 +104,98 @@ function BoxPlotDias(){
       text: '',
       align: 'left'
     },
+    yaxis: [
+      {
+        title: {
+          text: "Porcentaje de humedad (%)",
+        },
+        
+        
+      },
+    ],
+    xaxis: {
+      title: {
+        text: "Dias Totales",
+      },  
+    },
+    annotations: {
+      yaxis: [
+        
+        {
+         
+          borderColor: "",
+          label: {
+            borderColor: "",
+            style: {
+              color: "#fff",
+              background: "",
+            },
+           
+            
+          },
+        },
+        {
+         
+          borderColor: "",
+          label: {
+            borderColor: "",
+            style: {
+              color: "#fff",
+              background: "",
+            },
+            
+          },
+        },
+        {
+          y: contextDatao[0],
+          y2: contextDatao[1],
+
+          borderColor: "#000",
+          fillColor: "#00E396",
+          opacity: 0.2,
+          label: {
+            borderColor: "#333",
+            style: {
+              fontSize: "10px",
+              color: "#333",
+              background: "#00E396",
+            },
+          },
+        },
+        {
+          y: contextDatao[1],
+          y2: 0,
+
+          borderColor: "#000",
+          fillColor: "red",
+          opacity: 0.2,
+          label: {
+            borderColor: "#333",
+            style: {
+              fontSize: "10px",
+              color: "#333",
+              background: "#FEB019",
+            },
+          },
+        },
+        {
+          y: contextDatao[0],
+          y2: 60,
+
+          borderColor: "#000",
+          fillColor: "#128ae6",
+          opacity: 0.2,
+          label: {
+            borderColor: "#333",
+            style: {
+              fontSize: "10px",
+              color: "#333",
+              background: "#128ae6",
+            },
+          },
+        }
+      ],
+    },
     plotOptions: {
       boxPlot: {
         colors: {
@@ -108,6 +205,22 @@ function BoxPlotDias(){
       }
     }
   }
+  if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
+        
+    options.yaxis[0]['min'] = 0
+    options.yaxis[0]['max'] = 60 
+    options.annotations.yaxis[0].borderColor='red'
+    options.annotations.yaxis[0].label.borderColor='red'
+    options.annotations.yaxis[0].label.style.background='red'
+    options.annotations.yaxis[1].borderColor='#00E396'
+    options.annotations.yaxis[1].label.borderColor='#00E396'
+    options.annotations.yaxis[1].label.style.background='#00E396'
+    options.annotations.yaxis[0]['y']=contextDatao[1]
+    options.annotations.yaxis[1]['y']=contextDatao[0]
+    options.annotations.yaxis[1].label['text'] = 'Capacidad de campo';
+    options.annotations.yaxis[0].label['text'] = 'Punto de marchitez';
+   }
+  
 
     return(
       <div id="chart">

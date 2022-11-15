@@ -392,7 +392,6 @@ const mediand = porcent => q50d(domingo);
         },
         
       }
-      console.log(options.annotations.yaxis[0])
       
        if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
         
