@@ -18,6 +18,7 @@ const {json, setJson} = useContext(DataContext);
                     console.log(datos); 
                     localStorage.setItem('datos',JSON.stringify(datos)) 
                     setJson(datos)
+                     window.location.reload()
                 }
             });     
     } 
@@ -33,7 +34,7 @@ const {json, setJson} = useContext(DataContext);
                 </div>
                 <div className="buttons-container">
                     
-                    <button onClick={valores} className="btns btn-aceptar "><Link to="/visualization">Continuar</Link></button>
+                    <button onClick={valores} className="btns btn-aceptar "><Link to="/visualization" >Continuar</Link></button>
                 </div>     
         </form>
         </div>   

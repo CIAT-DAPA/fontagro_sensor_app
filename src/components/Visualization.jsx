@@ -38,6 +38,7 @@ function LoadDatatwo() {
   const viernes=[];
   const sabado=[];
   const domingo=[];
+  console.log(json)
   const fechasEnDias= fechas.map(fecha=>new Date(fecha));
   for(let i=0; i<fechasEnDias.length; i++){
     if(fechasEnDias[i].getDay()==1){
@@ -87,7 +88,7 @@ function LoadDatatwo() {
     : contextDatao[2] != undefined
     ? (infoGeneral = `Infomación general`)
     : (nombreFinca = "");
-  console.log();
+  
   return (
     <div className="container">
       <>
@@ -96,6 +97,7 @@ function LoadDatatwo() {
             <p className="info-general">{infoGeneral}</p>
           </div>
           <p className="info">{tituloInicio}</p>
+          
           {tituloGeneral && <p className="titulo-general">{tituloGeneral}</p>}
           {nombreFinca && <p className="titulo-general">{nombreFinca}</p>}
           {tituloGrafica && <p className="titulo-grafica">{tituloGrafica} </p>}
@@ -103,7 +105,16 @@ function LoadDatatwo() {
             <p className="titulo-grafica">{periodoDeTiempo} </p>
           )}
         </div>
-
+        <div className="card card-body shadow-sm  mb-5 bg-body rounded">
+              <p>
+                En la gráficas puede ver el comportamiento de la humedad de
+                suelo en el tiempo, al ingresar el tipo de campo de su finca,
+                podra visualizar dos lineas que represetan los limites de
+                humedad aptos para su suelo, adicionalmente abajo puede
+                visualizar las estadisticas en el periodo de tiempo que estuvo
+                instalado el sensor.
+              </p>
+            </div>
         <div className="card shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
             <p className="grafica-titulo">Porcentaje de humedad</p>
@@ -126,23 +137,7 @@ function LoadDatatwo() {
           </div>
         </div>
 
-        <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
-          <div className="card-header mb-2">
-            <p className="">Variabilidad del porcentaje de humedad</p>
-          </div>
-          <p className="boxplot-text">
-            En la siguiene grafica puede ver las estadisticas de humedad de
-            suelo en los siete dias de la semana
-          </p>
-          <div className="colors">
-            <div className="baja"></div> <p className="humedad">Humedad Baja</p>
-            <div className="media"></div>
-            <p className="humedad"> Humedad ideal</p>
-            <div className="alta"></div>
-            <p className="humedad">Suelo Saturado</p>
-          </div>
-          <BoxPlot />
-        </div>
+       
         <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
             <p className="">Variabilidad del porcentaje de humedad</p>
@@ -160,7 +155,23 @@ function LoadDatatwo() {
           </div>
           <BoxPlotDias />
         </div>
-        
+        <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
+          <div className="card-header mb-2">
+            <p className="">Variabilidad del porcentaje de humedad</p>
+          </div>
+          <p className="boxplot-text">
+            En la siguiene grafica puede ver las estadisticas de humedad de
+            suelo en los siete dias de la semana
+          </p>
+          <div className="colors">
+            <div className="baja"></div> <p className="humedad">Humedad Baja</p>
+            <div className="media"></div>
+            <p className="humedad"> Humedad ideal</p>
+            <div className="alta"></div>
+            <p className="humedad">Suelo Saturado</p>
+          </div>
+          <BoxPlot />
+        </div>
       <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
         <p>Tabla de datos en el tiempo</p>
@@ -174,16 +185,7 @@ function LoadDatatwo() {
         <div className="plots-container">
           <p></p>
           <div id="chart">
-            <div className="card card-body shadow-sm  mb-5 bg-body rounded">
-              <p>
-                En la gráficas puede ver el comportamiento de la humedad de
-                suelo en el tiempo, al ingresar el tipo de campo de su finca,
-                podra visualizar dos lineas que represetan los limites de
-                humedad aptos para su suelo, adicionalmente abajo puede
-                visualizar las estadisticas en el periodo de tiempo que estuvo
-                instalado el sensor.
-              </p>
-            </div>
+          
 
             <div className="report">
               <DownloadPdf

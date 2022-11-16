@@ -11,8 +11,6 @@ function ColorGraphic(){
   let ini= new Date(inicio)
   let fi= new Date(fin)
   const hasfilter= (inicio && fin) ;
-  console.log(hasfilter)
-
   const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
 
 

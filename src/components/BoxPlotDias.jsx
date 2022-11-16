@@ -52,7 +52,6 @@ const { contextDatao } = useContext(DataContext);
     groups[date].push(game);
     return groups;
   }, {});
-  
   const fechas = [];
   const porcentaje = [];
   const getData = () => {
@@ -69,12 +68,7 @@ const { contextDatao } = useContext(DataContext);
   for(let i =0; i<fechas.length;i++){
     fechasSinNumero.push(fechas[i].slice(0,9))
   }
-  /* for(let i=0; i<50;i++){
-    console.log(porcentaje[i])
-  } */
-  /* for(i=0; i<fechas.length; i++){
-    fechas[i].
-  } */
+
   const x= Object.entries(groups).map(([index,group])=>{
       const valores=getValores(group);
       const minv= min(valores).toFixed(2)
@@ -83,12 +77,13 @@ const { contextDatao } = useContext(DataContext);
       const q25= q25l(valores).toFixed(2)
       const q50= q50l(valores).toFixed(2)
       const q75= q75l(valores).toFixed(2)
-      console.log([minv,q25,media,q75,maxv])
       return {
         x:index,
         y:[minv,q25,media,q75,maxv]
       }
   })
+ 
+  
   const series= [
     {
       type: 'boxPlot',

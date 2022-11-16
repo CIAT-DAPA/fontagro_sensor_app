@@ -1,9 +1,47 @@
-import {React,useEffect} from "react";
+import {React,useEffect,useContext} from "react";
 import Table from 'react-bootstrap/Table';
 import '../assets/styles/table.css'
+import { DataContext } from "../context/StaticContex";
+
+const min= datos=> Math.min(...datos)
+const max= datos=> Math.max(...datos)
+const arrayAsc= datos=>  datos.sort((a,b)=>a-b);
+const quantilel = (datos, q) => {
+  const sorted = arrayAsc(datos);
+  const pos = (sorted.length - 1) * q;
+  const base = Math.floor(pos);
+  const rest = pos - base;
+  if (sorted[base + 1] !== undefined) {
+      return sorted[base] + rest * (sorted[base + 1] - sorted[base]);
+  } else {
+      return sorted[base];
+  }
+};
+const q25l = datos => quantilel(datos, .25);
+
+
+const q50l = datos => quantilel(datos, .50);
+
+const q75l = datos => quantilel(datos, .75);
+
+const medianl = datos => q50l(datos);
+
+const getValores=(datos)=>{
+  let valores=[]
+  for(let i=0; i<datos.length;i++){
+    valores.push(parseFloat(datos[i].SW10))
+  }
+  return valores
+
+}
+
 function ShowTable(props){
+const { json } = useContext(DataContext);
+
     const data = localStorage.getItem("datos");
     const datos = JSON.parse(data);
+  datos.data.shift();
+
     const fechas = [];
   const porcentaje = [];
   const getData = () => {
@@ -15,23 +53,48 @@ function ShowTable(props){
   getData();
   porcentaje.shift();
   fechas.shift();
-  console.log(props.dias)
+  const groups = datos.data.reduce((groups, game) => {
+    const date = game.Fecha.split(' ')[0];
+    if (!groups[date]) {
+      groups[date] = [];
+    }
+    groups[date].push(game);
+    return groups;
+  }, {});
+  const x= Object.entries(groups).map(([index,group])=>{
+    const valores=getValores(group);
+    const minv= min(valores).toFixed(2)
+    const maxv= max(valores).toFixed(2)
+    const media= medianl(valores).toFixed(2)
+    const q25= q25l(valores).toFixed(2)
+    const q50= q50l(valores).toFixed(2)
+    const q75= q75l(valores).toFixed(2)
+    return {
+      x:index,
+      y:[minv,q25,media,q75,maxv]
+    }
+  })
+
+
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
   
     useEffect(() => {
-       /* const crearTabla=()=>{
+       const crearTabla=()=>{
         var table = document.getElementById('my-table');
-        for (let i=0; i<34;i++){
+        for (let i=0; i<x.length;i++){
             var row= `<tr>
-                        <td>${fechas[i]}</td>
-                        <td>${porcentaje[i]}</td>
+                        <td>${x[i].x}</td>
+                        <td>${x[i].y[0]}</td>
+                        <td>${x[i].y[4]}</td>
+                        <td>${x[i].y[2]}</td>
                         
                     </tr>`
             table.innerHTML+=row;
+            
         }
        }
-       crearTabla(); */
+       crearTabla();
       }, []);
     
     
@@ -40,59 +103,12 @@ function ShowTable(props){
             <Table id="hi" striped  >
             <thead>
         <tr>
-          <th>Periodo</th>
+          <th>Fechas</th>
           <th>Mínimo</th>
           <th>Máximo</th>
           <th>Promedio</th>
         </tr>
-        <tr className="tr">
-          <td>{`${fechas[0]}-${fechas.at(-1)}`}</td>
-          <td>{Math.min(...porcentajeFLoat)}</td>
-          <td>{Math.max(...porcentajeFLoat)}</td>
-          <td>{prom().toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Lunes`}</td>
-          <td>{Math.min(...props.dias[0])}</td>
-          <td>{Math.max(...props.dias[0])}</td>
-          <td>{(props.dias[0].reduce((a, b) => a + b,0)/props.dias[0].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Martes`}</td>
-          <td>{Math.min(...props.dias[1])}</td>
-          <td>{Math.max(...props.dias[1])}</td>
-          <td>{(props.dias[1].reduce((a, b) => a + b,0)/props.dias[1].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Miercoles`}</td>
-          <td>{Math.min(...props.dias[2])}</td>
-          <td>{Math.max(...props.dias[2])}</td>
-          <td>{(props.dias[2].reduce((a, b) => a + b,0)/props.dias[2].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Jueves`}</td>
-          <td>{Math.min(...props.dias[3])}</td>
-          <td>{Math.max(...props.dias[3])}</td>
-          <td>{(props.dias[3].reduce((a, b) => a + b,0)/props.dias[3].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Viernes`}</td>
-          <td>{Math.min(...props.dias[4])}</td>
-          <td>{Math.max(...props.dias[4])}</td>
-          <td>{(props.dias[4].reduce((a, b) => a + b,0)/props.dias[4].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Sabado`}</td>
-          <td>{Math.min(...props.dias[5])}</td>
-          <td>{Math.max(...props.dias[5])}</td>
-          <td>{(props.dias[5].reduce((a, b) => a + b,0)/props.dias[5].length).toFixed(2)}</td>
-        </tr>
-        <tr className="tr">
-          <td>{`Domingo`}</td>
-          <td>{Math.min(...props.dias[6])}</td>
-          <td>{Math.max(...props.dias[6])}</td>
-          <td>{(props.dias[6].reduce((a, b) => a + b,0)/props.dias[6].length).toFixed(2)}</td>
-        </tr>
+       
       </thead>
         
         <tbody id="my-table">
