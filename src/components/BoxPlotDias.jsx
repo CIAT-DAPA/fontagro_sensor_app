@@ -37,12 +37,21 @@ const getValores=(datos)=>{
 }
 
 function BoxPlotDias(){
-const { contextDatao } = useContext(DataContext);
+  const { inicio } = useContext(DataContext);
+  const { fin } = useContext(DataContext);
+  const { contextDatao } = useContext(DataContext);
 
 
   
   const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
+  let ini= new Date(inicio)
+  let fi= new Date(fin)
+  const hasfilter= (inicio && fin) ;
+  const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
+  const fechas = filterP.map(dato=>dato.Fecha);
+  const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
+
   datos.data.shift();
   const groups = datos.data.reduce((groups, game) => {
     const date = game.Fecha.split(' ')[0];
@@ -52,7 +61,7 @@ const { contextDatao } = useContext(DataContext);
     groups[date].push(game);
     return groups;
   }, {});
-  const fechas = [];
+  /* const fechas = [];
   const porcentaje = [];
   const getData = () => {
     for (let i = 0; i < datos.data.length; i++) {
@@ -60,9 +69,12 @@ const { contextDatao } = useContext(DataContext);
       porcentaje.push(datos.data[i].SW10);
     }
   }; 
-  getData();
+  getData(); */
+  console.log(porcentaje);
+  console.log(fechas)
   porcentaje.shift();
   fechas.shift();
+
   const fechasSinNumero=[]
   const fechasEnDias= fechas.map(fecha=>new Date(fecha));
   for(let i =0; i<fechas.length;i++){

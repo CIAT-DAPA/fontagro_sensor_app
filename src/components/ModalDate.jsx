@@ -19,15 +19,22 @@ function ModalDate({showw,handleClosee}){
   getData();
   porcentaje.shift();
   fechas.shift();
-
+    
+    
+    const valueStart= new Date(fechas[0]).toISOString().split('T')[0]
+    const valueEnd= new Date(fechas.at(-1)).toISOString().split('T')[0]
+    if(inicio=='' && fin==''){
+        setInicio(valueStart)
+        setFin(valueEnd)
+    }
+    
     const guardarFecha=(e)=>{
         setInicio(e.target.value);  
     }
     const guardarFechaFin=(e)=>{
         setFin(e.target.value);  
     }
-    const valueStart= new Date(fechas[0]).toISOString().split('T')[0]
-    const valueEnd= new Date(fechas.at(-1)).toISOString().split('T')[0]
+    
     return(
         <div>
             <Modal show={showw} onHide={handleClosee}>

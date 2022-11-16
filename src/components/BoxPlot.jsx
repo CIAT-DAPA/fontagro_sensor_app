@@ -6,18 +6,21 @@ import '../assets/styles/boxplot.css'
 
 function BoxPlot(){
   const { contextDatao } = useContext(DataContext);
+  const { inicio } = useContext(DataContext);
+  const { fin } = useContext(DataContext);
 
 const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
-  const fechas = [];
-  const porcentaje = [];
-  const getData = () => {
-    for (let i = 0; i < datos.data.length; i++) {
-      fechas.push(datos.data[i].Fecha);
-      porcentaje.push(datos.data[i].SW10);
-    }
-  }; 
-  getData();
+  let ini= new Date(inicio)
+  let fi= new Date(fin)
+  const hasfilter= (inicio && fin) ;
+  const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
+
+
+  const fechas = filterP.map(dato=>dato.Fecha);
+  const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
+  porcentaje.shift();
+  fechas.shift();
   porcentaje.shift();
   fechas.shift();
   const lunes=[];

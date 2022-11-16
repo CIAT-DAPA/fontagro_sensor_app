@@ -18,6 +18,8 @@ function LoadDatatwo() {
   const { nombreP } = useContext(DataContext);
   const { finca } = useContext(DataContext);
   const { json } = useContext(DataContext);
+  const { inicio } = useContext(DataContext);
+  const { fin } = useContext(DataContext);
   const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
   const fechas = [];
@@ -29,6 +31,7 @@ function LoadDatatwo() {
     }
   };
   getData();
+  console.log(inicio)
   porcentaje.shift();
   fechas.shift();
   const lunes=[];
@@ -65,10 +68,11 @@ function LoadDatatwo() {
     
     
   }
+   inicio!='' && fin!='' ?  periodoDeTiempo = `Periodo de tiempo: ${inicio} -- ${fin}` 
+   : console.log('benas')
   if (contextDatao[2] != undefined) {
     tituloGrafica = `Textura del suelo :  ${contextDatao[2]}`;
     tituloInicio = "";
-    periodoDeTiempo = `Periodo de tiempo: ${fechas[0]} -- ${fechas.at(-1)}`;
   } else {
     tituloGrafica = "";
   }
