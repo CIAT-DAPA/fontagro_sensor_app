@@ -8,11 +8,11 @@ function DownloadPdf({rootElementId}){
         const input= document.getElementById(rootElementId);
        
         var opt = {
-            margin: 0,
+            margin: -2,
             filename: 'Reporte.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'pt', format: [1400, 1020], orientation: 'portrait' }
+            jsPDF: { unit: 'pt', format: [1400, 1000], orientation: 'l' }
         };
         html2pdf().from(input).set(opt).save();
         

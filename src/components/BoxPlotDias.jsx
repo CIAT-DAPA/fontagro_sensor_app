@@ -51,9 +51,8 @@ function BoxPlotDias(){
   const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
-
   datos.data.shift();
-  const groups = datos.data.reduce((groups, game) => {
+  const groups = filterP.reduce((groups, game) => {
     const date = game.Fecha.split(' ')[0];
     if (!groups[date]) {
       groups[date] = [];
@@ -70,16 +69,10 @@ function BoxPlotDias(){
     }
   }; 
   getData(); */
-  console.log(porcentaje);
-  console.log(fechas)
+  console.log(groups);
+  
   porcentaje.shift();
   fechas.shift();
-
-  const fechasSinNumero=[]
-  const fechasEnDias= fechas.map(fecha=>new Date(fecha));
-  for(let i =0; i<fechas.length;i++){
-    fechasSinNumero.push(fechas[i].slice(0,9))
-  }
 
   const x= Object.entries(groups).map(([index,group])=>{
       const valores=getValores(group);

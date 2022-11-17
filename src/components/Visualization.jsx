@@ -32,6 +32,7 @@ function LoadDatatwo() {
   };
   getData();
   console.log(inicio)
+  console.log(fin)
   porcentaje.shift();
   fechas.shift();
   const lunes=[];
@@ -41,7 +42,7 @@ function LoadDatatwo() {
   const viernes=[];
   const sabado=[];
   const domingo=[];
-  console.log(json)
+
   const fechasEnDias= fechas.map(fecha=>new Date(fecha));
   for(let i=0; i<fechasEnDias.length; i++){
     if(fechasEnDias[i].getDay()==1){
@@ -94,7 +95,7 @@ function LoadDatatwo() {
     : (nombreFinca = "");
   
   return (
-    <div className="container">
+    <div className="container" id='contain'>
       <>
         <div className="card mb-4 shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">

@@ -1,4 +1,4 @@
-import {React,useEffect,useContext} from "react";
+import {React,useEffect,useContext,useState} from "react";
 import Table from 'react-bootstrap/Table';
 import '../assets/styles/table.css'
 import { DataContext } from "../context/StaticContex";
@@ -37,23 +37,28 @@ const getValores=(datos)=>{
 
 function ShowTable(props){
 const { json } = useContext(DataContext);
+const { inicio } = useContext(DataContext);
+  const { fin } = useContext(DataContext);
+  const { contextDatao } = useContext(DataContext);
+
 
     const data = localStorage.getItem("datos");
     const datos = JSON.parse(data);
+    let ini= new Date(inicio)
+  let fi= new Date(fin)
+  const hasfilter= (inicio && fin) ;
+  const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
+  const fechas = filterP.map(dato=>dato.Fecha);
+  const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
   datos.data.shift();
+  
 
-    const fechas = [];
-  const porcentaje = [];
-  const getData = () => {
-    for (let i = 0; i < datos.data.length; i++) {
-      fechas.push(datos.data[i].Fecha);
-      porcentaje.push(datos.data[i].SW10);
-    }
-  };
-  getData();
+  
+
+
   porcentaje.shift();
   fechas.shift();
-  const groups = datos.data.reduce((groups, game) => {
+  const groups = filterP.reduce((groups, game) => {
     const date = game.Fecha.split(' ')[0];
     if (!groups[date]) {
       groups[date] = [];
@@ -75,29 +80,37 @@ const { json } = useContext(DataContext);
     }
   })
 
-
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
   
+  
+  
+
     useEffect(() => {
        const crearTabla=()=>{
         var table = document.getElementById('my-table');
+        
         for (let i=0; i<x.length;i++){
+          
             var row= `<tr>
                         <td>${x[i].x}</td>
                         <td>${x[i].y[0]}</td>
                         <td>${x[i].y[4]}</td>
                         <td>${x[i].y[2]}</td>
                         
+                        
                     </tr>`
             table.innerHTML+=row;
             
         }
+        
        }
        crearTabla();
       }, []);
-    
-    
+      
+      
+
+
     return(
         <div className="table-responsive">
             <Table id="hi" striped  >
@@ -111,8 +124,8 @@ const { json } = useContext(DataContext);
        
       </thead>
         
-        <tbody id="my-table">
-          
+        <tbody id="my-table"  >
+         
         </tbody>
       </Table>
         </div>

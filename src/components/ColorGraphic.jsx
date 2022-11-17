@@ -12,7 +12,7 @@ function ColorGraphic(){
   let fi= new Date(fin)
   const hasfilter= (inicio && fin) ;
   const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
-
+  
 
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
