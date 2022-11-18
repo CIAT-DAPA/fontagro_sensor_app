@@ -31,8 +31,7 @@ function LoadDatatwo() {
     }
   };
   getData();
-  console.log(inicio)
-  console.log(fin)
+ 
   porcentaje.shift();
   fechas.shift();
   const lunes=[];
@@ -70,7 +69,7 @@ function LoadDatatwo() {
     
   }
    inicio!='' && fin!='' ?  periodoDeTiempo = `Periodo de tiempo: ${inicio} -- ${fin}` 
-   : console.log('benas')
+   : console.log('')
   if (contextDatao[2] != undefined) {
     tituloGrafica = `Textura del suelo :  ${contextDatao[2]}`;
     tituloInicio = "";

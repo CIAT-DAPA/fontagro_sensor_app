@@ -39,7 +39,6 @@ function ShowTable(props){
 const { json } = useContext(DataContext);
 const { inicio } = useContext(DataContext);
   const { fin } = useContext(DataContext);
-  const { contextDatao } = useContext(DataContext);
 
 
     const data = localStorage.getItem("datos");
@@ -56,8 +55,7 @@ const { inicio } = useContext(DataContext);
   
 
 
-  porcentaje.shift();
-  fechas.shift();
+  
   const groups = filterP.reduce((groups, game) => {
     const date = game.Fecha.split(' ')[0];
     if (!groups[date]) {
@@ -82,32 +80,15 @@ const { inicio } = useContext(DataContext);
 
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
+ 
   
   
   
 
-    useEffect(() => {
-       const crearTabla=()=>{
-        var table = document.getElementById('my-table');
-        
-        for (let i=0; i<x.length;i++){
-          
-            var row= `<tr>
-                        <td>${x[i].x}</td>
-                        <td>${x[i].y[0]}</td>
-                        <td>${x[i].y[4]}</td>
-                        <td>${x[i].y[2]}</td>
-                        
-                        
-                    </tr>`
-            table.innerHTML+=row;
-            
-        }
-        
-       }
-       crearTabla();
-      }, []);
+    
       
+      console.log(x[0])
+      console.log(x.at(-1))
       
 
 
@@ -125,7 +106,17 @@ const { inicio } = useContext(DataContext);
       </thead>
         
         <tbody id="my-table"  >
-         
+         {
+          x.map((dat)=>{
+            return <tr>
+            <td>{dat.x}</td>
+            <td>{dat.y[0]}</td>
+            <td>{dat.y[4]}</td>
+            <td>{dat.y[2]}</td>
+            
+        </tr>
+          })
+         }
         </tbody>
       </Table>
         </div>

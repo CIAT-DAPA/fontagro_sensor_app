@@ -9,10 +9,11 @@ function DownloadPdf({rootElementId}){
        
         var opt = {
             margin: -2,
+
             filename: 'Reporte.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'pt', format: [1400, 1000], orientation: 'l' }
+            jsPDF: { unit: 'px', format: [1200, 1200], orientation: 'portrait' }
         };
         html2pdf().from(input).set(opt).save();
         

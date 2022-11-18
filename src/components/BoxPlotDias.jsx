@@ -69,7 +69,7 @@ function BoxPlotDias(){
     }
   }; 
   getData(); */
-  console.log(groups);
+ 
   
   porcentaje.shift();
   fechas.shift();
