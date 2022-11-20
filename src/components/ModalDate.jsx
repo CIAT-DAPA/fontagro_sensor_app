@@ -14,6 +14,7 @@ function ModalDate({showw,handleClosee}){
   const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
+  console.log(filterP)
   datos.data.shift();
     fechas.shift()
     console.log(fechas[0])
