@@ -112,8 +112,7 @@ const { inicio } = useContext(DataContext);
             <td>{dat.x}</td>
             <td>{dat.y[0]}</td>
             <td>{dat.y[4]}</td>
-            <td>{dat.y[2]}</td>
-            
+            <td>{dat.y[2]}</td> 
         </tr>
           })
          }

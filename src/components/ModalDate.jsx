@@ -8,19 +8,15 @@ function ModalDate({showw,handleClosee}){
     const {fin, setFin} = useContext(DataContext);
     const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
-  const fechas = [];
-  const porcentaje = [];
-  const getData = () => {
-    for (let i = 0; i < datos.data.length; i++) {
-      fechas.push(datos.data[i].Fecha);
-      porcentaje.push(datos.data[i].SW10);
-    }
-  };
-  getData();
-  porcentaje.shift();
-  fechas.shift();
-    
-    
+  let ini= new Date(inicio)
+  let fi= new Date(fin)
+  const hasfilter= (inicio && fin) ;
+  const filterP= hasfilter ?  datos.data.filter(dato=>new Date(dato.Fecha) > ini && new Date(dato.Fecha) <=fi) : datos.data
+  const fechas = filterP.map(dato=>dato.Fecha);
+  const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
+  datos.data.shift();
+    fechas.shift()
+    console.log(fechas[0])
     const valueStart= new Date(fechas[0]).toISOString().split('T')[0]
     const valueEnd= new Date(fechas.at(-1)).toISOString().split('T')[0]
     if(inicio=='' && fin==''){
@@ -31,8 +27,12 @@ function ModalDate({showw,handleClosee}){
     const guardarFecha=(e)=>{
         setInicio(e.target.value);  
     }
+    
+    
     const guardarFechaFin=(e)=>{
         setFin(e.target.value);  
+       
+        
     }
     
     return(
