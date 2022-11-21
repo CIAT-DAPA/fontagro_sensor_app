@@ -6,7 +6,7 @@ import App from './App';
 /* import reportWebVitals from './reportWebVitals'; */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter,Route  } from "react-router-dom";
-/* import swDev from './swDev'; */
+import ServiceWorker from './serviceWorker';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,3 +22,4 @@ root.render(
 
 /* reportWebVitals(); */
 /* swDev(); */
+ServiceWorker()
