@@ -31,6 +31,8 @@ function LoadDatatwo() {
     }
   };
   getData();
+  console.log(window.innerWidth)
+  console.log(window.innerWidth+50)
  
   porcentaje.shift();
   fechas.shift();

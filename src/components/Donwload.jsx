@@ -13,7 +13,7 @@ function DownloadPdf({rootElementId}){
             filename: 'Reporte.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'px', format: [window.innerHeight, window.innerWidth], orientation: 'portrait' }
+            jsPDF: { unit: 'px', format: [1400,window.innerWidth], orientation: 'portrait' }
         };
         html2pdf().from(input).set(opt).save();
         
