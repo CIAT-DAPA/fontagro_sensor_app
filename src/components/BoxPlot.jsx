@@ -21,8 +21,6 @@ const data = localStorage.getItem("datos");
   
   porcentaje.shift();
   fechas.shift();
-  porcentaje.shift();
-  fechas.shift();
   const lunes=[];
   const martes=[];
   const miercoles=[];

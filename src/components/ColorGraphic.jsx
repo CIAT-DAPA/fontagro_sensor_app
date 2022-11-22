@@ -62,7 +62,7 @@ function ColorGraphic(){
         title: {
           text: "Porcentaje de Humedad (%)",
         },
-        max: 60,
+        max: 80,
         min: 0,
       },
     ],

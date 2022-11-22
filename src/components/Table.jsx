@@ -81,17 +81,6 @@ const { inicio } = useContext(DataContext);
   const porcentajeFLoat= porcentaje.map(porcent=>parseFloat(porcent));
   const prom =porcent=> porcentajeFLoat.reduce((a, b) => a + b,0)/porcentajeFLoat.length;
  
-  
-  
-  
-
-    
-      
-      console.log(x[0])
-      console.log(x.at(-1))
-      
-
-
     return(
         <div className="table-responsive">
             <Table id="hi" striped  >
