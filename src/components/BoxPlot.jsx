@@ -375,7 +375,7 @@ const mediand = porcent => q50d(domingo);
             },
             {
               y: contextDatao[0],
-              y2: 60,
+              y2: 80,
     
               borderColor: "#000",
               fillColor: "#128ae6",
@@ -397,7 +397,7 @@ const mediand = porcent => q50d(domingo);
        if(contextDatao[0]!= undefined && contextDatao[1]!= undefined){
         
         options.yaxis[0]['min'] = 0
-        options.yaxis[0]['max'] = 60 
+        options.yaxis[0]['max'] = 80 
         options.annotations.yaxis[0].borderColor='red'
         options.annotations.yaxis[0].label.borderColor='red'
         options.annotations.yaxis[0].label.style.background='red'

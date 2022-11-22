@@ -128,7 +128,7 @@ function ColorGraphic(){
         },
         {
           y: contextDatao[0],
-          y2: 60,
+          y2: 80,
 
           borderColor: "#000",
           fillColor: "#128ae6",
