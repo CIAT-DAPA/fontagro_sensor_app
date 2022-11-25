@@ -41,7 +41,7 @@ function ModalDate({showw,handleClosee}){
             <Modal show={showw} onHide={handleClosee}>
                 `
                 <Modal.Header closeButton>
-                    <Modal.Title> Ingrese el rango de fechas a filtrar, las fechas deben esta dentro del rango: {inicio} -- {fin} </Modal.Title>
+                    <Modal.Title> Ingrese el rango de fechas a filtrar </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div>

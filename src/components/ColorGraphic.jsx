@@ -63,7 +63,7 @@ function ColorGraphic(){
         title: {
           text: "Porcentaje de Humedad (%)",
         },
-        max: Math.max(...porcentaje)+5,
+        max: Math.max(...porcentaje)+15,
         min: 0,
       },
     ],
@@ -129,7 +129,7 @@ function ColorGraphic(){
         },
         {
           y: contextDatao[0],
-          y2: Math.max(...porcentaje)+5,
+          y2: Math.max(...porcentaje)+55,
 
           borderColor: "#000",
           fillColor: "#128ae6",
