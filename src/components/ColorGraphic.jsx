@@ -16,6 +16,7 @@ function ColorGraphic(){
 
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
+  console.log(porcentaje)
   porcentaje.shift();
   fechas.shift();
   const series = [
@@ -62,7 +63,7 @@ function ColorGraphic(){
         title: {
           text: "Porcentaje de Humedad (%)",
         },
-        max: 80,
+        max: Math.max(...porcentaje)+5,
         min: 0,
       },
     ],
@@ -128,7 +129,7 @@ function ColorGraphic(){
         },
         {
           y: contextDatao[0],
-          y2: 80,
+          y2: Math.max(...porcentaje)+5,
 
           borderColor: "#000",
           fillColor: "#128ae6",

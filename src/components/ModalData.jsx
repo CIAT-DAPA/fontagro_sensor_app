@@ -32,7 +32,7 @@ function ModalData({show, handleClose}){
             <input onChange={mostrarNombre} type="text" className="form-control" id="inputnombre"  /> 
             </div>
             <div>
-            <label htmlFor="inputData">Nombre Finca</label>
+            <label htmlFor="inputData">Nombre de la finca</label>
             <input onChange={mostrarFinca} type="text" className="form-control" id="inputfinca"  /> 
             </div>
             

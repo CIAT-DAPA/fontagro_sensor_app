@@ -31,7 +31,7 @@ function NavVisualiation(){
           <Navbar key={expand} bg="light" expand={expand} className="mb-3">
             <Container fluid>
             <Link className="navbar-brand" to="/">
-        <img src={require('../assets/images/logo2.png')}  />
+        <img src={require('../assets/images/Logo-gota.png')}  />
       </Link>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
