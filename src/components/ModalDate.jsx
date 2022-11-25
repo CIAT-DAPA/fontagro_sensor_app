@@ -20,6 +20,10 @@ function ModalDate({showw,handleClosee}){
    
     const valueStart= new Date(fechas[0]).toISOString().split('T')[0]
     const valueEnd= new Date(fechas.at(-1)).toISOString().split('T')[0]
+    if (fi<=ini){
+        alert('rangos malosx')
+    }
+    
     if(inicio=='' && fin==''){
         setInicio(valueStart)
         setFin(valueEnd)

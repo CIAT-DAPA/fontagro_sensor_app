@@ -16,8 +16,8 @@ function ColorGraphic(){
 
   const fechas = filterP.map(dato=>dato.Fecha);
   const porcentaje = filterP.map(dato=>parseFloat(dato.SW10));
-  console.log(porcentaje)
   porcentaje.shift();
+
   fechas.shift();
   const series = [
     {
