@@ -5,15 +5,16 @@ import ColorGraphic from "./ColorGraphic";
 import DownloadPdf from "./Donwload";
 import ShowTable from "./Table";
 import BoxPlotDias from "./BoxPlotDias";
-import BoxPlot from "./BoxPlot";
+import ModalCampo from "./ModalCampo";
 function LoadDatatwo() {
+    
   let tituloGrafica = "";
   let tituloGeneral = "";
   let nombreFinca = "";
   let periodoDeTiempo = "";
   let infoGeneral = "";
   let tituloInicio =
-    "Lo invitamos a ingresar sus datos y seleccionar su tipo de campo en el menu, parte superior derecha";
+    "En el menu de la parte superior derecha, podrá filtrar datos en un periodo de tiempo especifico e ingresar datos como su nombre y el de su finca.";
   const { contextDatao } = useContext(DataContext);
   const { nombreP } = useContext(DataContext);
   const { finca } = useContext(DataContext);
@@ -33,40 +34,7 @@ function LoadDatatwo() {
   getData();
   porcentaje.shift();
   fechas.shift();
-  const lunes=[];
-  const martes=[];
-  const miercoles=[];
-  const jueves=[];
-  const viernes=[];
-  const sabado=[];
-  const domingo=[];
 
-  const fechasEnDias= fechas.map(fecha=>new Date(fecha));
-  for(let i=0; i<fechasEnDias.length; i++){
-    if(fechasEnDias[i].getDay()==1){
-      lunes.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==2){
-      martes.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==3){
-      miercoles.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==4){
-      jueves.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==5){
-      viernes.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==6){
-      sabado.push(parseFloat(porcentaje[i]));
-    }
-    else if(fechasEnDias[i].getDay()==0){
-      domingo.push(parseFloat(porcentaje[i]));
-    }
-    
-    
-  }
    inicio!='' && fin!='' ?  periodoDeTiempo = `Periodo de tiempo: ${inicio} -- ${fin}` 
    : console.log('')
   if (contextDatao[2] != undefined) {
@@ -91,7 +59,9 @@ function LoadDatatwo() {
     : contextDatao[2] != undefined
     ? (infoGeneral = `Infomación general`)
     : (nombreFinca = "");
-  
+    const [showc, setShowc] = useState(false);
+    const handleClosec = () => setShowc(false);
+    const handleShowc = () => setShowc(true);
   return (
     <div className="container" id='contain'>
       <>
@@ -111,14 +81,14 @@ function LoadDatatwo() {
         </div>
         <div className="card card-body shadow-sm  mb-5 bg-body rounded">
               <p>
-                En la gráficas puede ver el comportamiento de la humedad de
-                suelo en el tiempo, al ingresar el tipo de campo de su finca,
-                podra visualizar dos lineas que represetan los limites de
-                humedad aptos para su suelo, adicionalmente abajo puede
-                visualizar las estadisticas en el periodo de tiempo que estuvo
-                instalado el sensor.
+                En la primer grafica puede observar  el comportamiento de humedad de su finca en el tiempo que estuvo instalado el sensor, en la segunda grafica podrá observar las estadisticas de todos los dias en los que el sensor estuvo instalado.
+                Por ultimo encontrará una tabla con estos datos expresados en filas y columnas para una mejor interpretación, todas las graficas y la tabla serán actualizadas de manera dinamica en función a las fechas que filtre.
+                Lo invitamos a seleccionar su tipo de campo, presionando el boton, 'Selecciona textura de suelo' que se encuentra debajo, al seleccionar un tipo de suelo la grafica se actualizará mostrando los limites de humedad aptos para el tipo de suelo de su finca.
               </p>
+            <button onClick={handleShowc}  className="btn btn-primary my-4">Seleciona textura de suelo</button>
+
             </div>
+
         <div className="card shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
             <p className="grafica-titulo">Porcentaje de humedad</p>
@@ -159,23 +129,7 @@ function LoadDatatwo() {
           </div>
           <BoxPlotDias />
         </div>
-        <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
-          <div className="card-header mb-2">
-            <p className="">Variabilidad del porcentaje de humedad</p>
-          </div>
-          <p className="boxplot-text">
-            En la siguiene grafica puede ver las estadisticas de humedad de
-            suelo en los siete dias de la semana
-          </p>
-          <div className="colors">
-            <div className="baja"></div> <p className="humedad">Humedad Baja</p>
-            <div className="media"></div>
-            <p className="humedad"> Humedad ideal</p>
-            <div className="alta"></div>
-            <p className="humedad">Suelo Saturado</p>
-          </div>
-          <BoxPlot />
-        </div>
+       
       <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
         <p>Tabla de datos en el tiempo</p>
@@ -183,7 +137,7 @@ function LoadDatatwo() {
         </div>
         <p className="boxplot-text">En la siguiene tabla puede ver las estadisticas de humedad</p>
         
-      <ShowTable dias={[lunes,martes,miercoles,jueves,viernes,sabado,domingo]} />
+      <ShowTable  />
 
       </div>
         <div className="plots-container">
@@ -199,6 +153,7 @@ function LoadDatatwo() {
             </div>
           </div>
         </div>
+        <ModalCampo showc={showc} handleClosec={handleClosec} />
         
       </>
     </div>
