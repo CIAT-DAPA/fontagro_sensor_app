@@ -2,7 +2,7 @@
   "name": "fontagro_sensor_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ciat-dapa.github.io/fontagro_sensor_app",
+  "homepage": "tufincastats.open-aeps.org/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
