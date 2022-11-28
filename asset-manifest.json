@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/fontagro_sensor_app/static/css/main.68e25243.css",
-    "main.js": "/fontagro_sensor_app/static/js/main.9674529a.js",
-    "static/js/703.2c952b5b.chunk.js": "/fontagro_sensor_app/static/js/703.2c952b5b.chunk.js",
-    "static/js/27.a2029c88.chunk.js": "/fontagro_sensor_app/static/js/27.a2029c88.chunk.js",
-    "static/media/nica.png": "/fontagro_sensor_app/static/media/nica.7c6eb28b77a68ad354e0.png",
-    "static/media/ubicación.png": "/fontagro_sensor_app/static/media/ubicación.05c360e939642f59feba.png",
-    "static/media/colombia.png": "/fontagro_sensor_app/static/media/colombia.0a557c5eba997e0e7a74.png",
-    "static/media/background-data-user.jpg": "/fontagro_sensor_app/static/media/background-data-user.dba68cb1ca080ea9860a.jpg",
-    "static/media/logo-visualiti.png": "/fontagro_sensor_app/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png",
-    "static/media/honduras.png": "/fontagro_sensor_app/static/media/honduras.babd8cb8d2770b8994de.png",
-    "static/media/sensor.jpeg": "/fontagro_sensor_app/static/media/sensor.dc6d14c071e6de1f165a.jpeg",
-    "static/media/logo-ciat.png": "/fontagro_sensor_app/static/media/logo-ciat.9ff4996f25c3c24535b4.png",
-    "static/media/logo-fontagro1.png": "/fontagro_sensor_app/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
-    "index.html": "/fontagro_sensor_app/index.html",
-    "main.68e25243.css.map": "/fontagro_sensor_app/static/css/main.68e25243.css.map",
-    "main.9674529a.js.map": "/fontagro_sensor_app/static/js/main.9674529a.js.map",
-    "703.2c952b5b.chunk.js.map": "/fontagro_sensor_app/static/js/703.2c952b5b.chunk.js.map",
-    "27.a2029c88.chunk.js.map": "/fontagro_sensor_app/static/js/27.a2029c88.chunk.js.map"
+    "main.css": "/tufincastats.open-aeps.org/static/css/main.2b130a53.css",
+    "main.js": "/tufincastats.open-aeps.org/static/js/main.31b7583a.js",
+    "static/js/703.2c952b5b.chunk.js": "/tufincastats.open-aeps.org/static/js/703.2c952b5b.chunk.js",
+    "static/js/27.a2029c88.chunk.js": "/tufincastats.open-aeps.org/static/js/27.a2029c88.chunk.js",
+    "static/media/nica.png": "/tufincastats.open-aeps.org/static/media/nica.7c6eb28b77a68ad354e0.png",
+    "static/media/ubicación.png": "/tufincastats.open-aeps.org/static/media/ubicación.05c360e939642f59feba.png",
+    "static/media/colombia.png": "/tufincastats.open-aeps.org/static/media/colombia.0a557c5eba997e0e7a74.png",
+    "static/media/background-data-user.jpg": "/tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg",
+    "static/media/logo-visualiti.png": "/tufincastats.open-aeps.org/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png",
+    "static/media/honduras.png": "/tufincastats.open-aeps.org/static/media/honduras.babd8cb8d2770b8994de.png",
+    "static/media/sensor.jpeg": "/tufincastats.open-aeps.org/static/media/sensor.dc6d14c071e6de1f165a.jpeg",
+    "static/media/logo-ciat.png": "/tufincastats.open-aeps.org/static/media/logo-ciat.9ff4996f25c3c24535b4.png",
+    "static/media/logo-fontagro1.png": "/tufincastats.open-aeps.org/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
+    "index.html": "/tufincastats.open-aeps.org/index.html",
+    "main.2b130a53.css.map": "/tufincastats.open-aeps.org/static/css/main.2b130a53.css.map",
+    "main.31b7583a.js.map": "/tufincastats.open-aeps.org/static/js/main.31b7583a.js.map",
+    "703.2c952b5b.chunk.js.map": "/tufincastats.open-aeps.org/static/js/703.2c952b5b.chunk.js.map",
+    "27.a2029c88.chunk.js.map": "/tufincastats.open-aeps.org/static/js/27.a2029c88.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.68e25243.css",
-    "static/js/main.9674529a.js"
+    "static/css/main.2b130a53.css",
+    "static/js/main.31b7583a.js"
   ]
 }
