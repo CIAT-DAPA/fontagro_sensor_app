@@ -1,5 +1,6 @@
 let CACHE_NAME= 'codepwa'
 var urlCache= [
+    'https://tufincastats.open-aeps.org',
     'https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js',
    'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js',
