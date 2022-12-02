@@ -1,7 +1,7 @@
 let CACHE_NAME= 'codepwa'
 var urlCache= [
     
-    'https://tufincastats.open-aeps.org/',
+    //'https://tufincastats.open-aeps.org/',
     'https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js',
    'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js',
@@ -10,7 +10,7 @@ var urlCache= [
    'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js',
     /* //'https://tufincastats.open-aeps.org/static/js/bundle.js',
     /* 'https://tufincastats.open-aeps.org/static/manifest.json' */,
-    //'https://tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
+    'https://tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
     /* 'https://tufincastats.open-aeps.org/static/logo192.png',
     'https://tufincastats.open-aeps.org/static/media/logo-ciat.9ff4996f25c3c24535b4.png',
     'https://tufincastats.open-aeps.org/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png',
