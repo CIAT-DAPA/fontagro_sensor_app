@@ -11,7 +11,7 @@ var urlCache= [
     /* //'https://tufincastats.open-aeps.org/static/js/bundle.js',
     /* 'https://tufincastats.open-aeps.org/static/manifest.json' */,
     'static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
-    'https://tufincastats.open-aeps.org/static/logo192.png',
+    /* 'https://tufincastats.open-aeps.org/static/logo192.png',
     'https://tufincastats.open-aeps.org/static/media/logo-ciat.9ff4996f25c3c24535b4.png',
     'https://tufincastats.open-aeps.org/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png',
     'https://tufincastats.open-aeps.org/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png',,
@@ -19,7 +19,7 @@ var urlCache= [
     'https://tufincastats.open-aeps.org/static/media/nica.7c6eb28b77a68ad354e0.png',
     'https://tufincastats.open-aeps.org/static/media/honduras.babd8cb8d2770b8994de.png',
     'https://tufincastats.open-aeps.org/static/media/ubicación.05c360e939642f59feba.png',
-    'https://tufincastats.open-aeps.org/static/media/sensor.dc6d14c071e6de1f165a.jpeg',
+    'https://tufincastats.open-aeps.org/static/media/sensor.dc6d14c071e6de1f165a.jpeg', */
 
 
     //
