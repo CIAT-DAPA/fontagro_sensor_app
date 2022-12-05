@@ -10,7 +10,14 @@ var urlCache= [
    'https://tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
    'https://tufincastats.open-aeps.org/static/css/main.20b7941d.css',
-   'https://tufincastats.open-aeps.org/static/js/main.601a2edc.js'
+   'https://tufincastats.open-aeps.org/static/js/main.601a2edc.js',
+   'https://www.fontagro.org/new/uploads/files/Fontagro/Honduras%202.JPG',
+   'https://www.fontagro.org/new/uploads/noticias/b85c4234-9fdc-4a37-9487-cb5faff2ee0a.JPG',
+   'https://www.fontagro.org/new/noticias/403/es/que-comience-la-digitalizacion-de-la-agricultura-a-pequena-escala',
+   'https://www.fontagro.org/new/uploads/files/Fontagro/Colombia%203.JPG',
+   'https://www.fontagro.org/new/uploads/files/Fontagro/Nicaragua%203.JPG'
+
+
 ]
 this.addEventListener('install',(e)=>{
     e.waitUntil(
