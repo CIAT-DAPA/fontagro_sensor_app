@@ -9,7 +9,8 @@ var urlCache= [
    'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js',
    'https://tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-   'https://tufincastats.open-aeps.org/static/css/main.20b7941d.css'
+   'https://tufincastats.open-aeps.org/static/css/main.20b7941d.css',
+   'https://tufincastats.open-aeps.org/static/js/main.601a2edc.js'
 ]
 this.addEventListener('install',(e)=>{
     e.waitUntil(
