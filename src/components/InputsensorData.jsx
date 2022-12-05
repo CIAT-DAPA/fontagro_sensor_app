@@ -18,7 +18,7 @@ const {json, setJson} = useContext(DataContext);
                     console.log(datos); 
                     localStorage.setItem('datos',JSON.stringify(datos)) 
                     setJson(datos)
-                     //window.location.reload()
+                     window.location.reload()
                 }
             });     
     } 
