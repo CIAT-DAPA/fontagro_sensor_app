@@ -14,29 +14,29 @@ function ShowAbout({showa, handleClosea}){
             <h4>Digitalización de la agricultura de pequeña escala</h4>
             <p className='about-text'>Después de un proceso de diseño participativo, utilizando la metodología de visualización creativa, y luego de la prueba en campo de tres prototipos de solución tecnológica, el proyecto ya cuenta con un diseño de dispositivo para medir humedad de suelo, robusto, de alta usabilidad y bajo costo. El diseño seleccionado cuenta con múltiples mejoras con respecto a los prototipos, manteniendo una autonomía de carga de hasta seis meses en campo, con encendido automático al conectar el sensor, mayor robustez, diseño más elegante y mayor facilidad de descarga de datos y carga del dispositivo. De este sensor se han hecho 90 réplicas, que están instaladas en cultivos de de productores de la región en los paises de, Colombia, Honduras y Nicaragua. </p>
             <div className='img-container'>
-            <img className='sensor container' src='https://www.fontagro.org/new/uploads/noticias/Tres_paises.JPG' />
+            <img className='sensor container' src={require('../assets/images/ubicación.png')} />
 
             </div>
             <p>
             En Colombia, por ejemplo, con el acompañamiento de Jimmy Mañunga el consultor líder de la zona, se realizó el despliegue del dispositivo en cultivos de Café, Maíz y Frijol, en las veredas de San Antonio, San Rafael, Los Cerrillos, y las Mercedes, en el noroccidente del municipio de Popayán departamento del Cauca, como se puede ver en la siguiente imagen:
             </p>
             <div className='img-container'>
-            <img className='sensor container' src="https://www.fontagro.org/new/uploads/files/Fontagro/Colombia%203.JPG" />
+            <img className='sensor container' src={require('../assets/images/colombia.png')} />
 
             </div>
             <p>Por su parte, en Nicaragua, con el despliegue liderado por liderada por Jahnnier Eduardo, se realizó la instalación en Maíz, fríjol, café y tabaco en tres departamentos diferentes. Gracias al apoyo de la cooperativa Mira Flor y la cooperativa Buculmay que se instalaron 10 sensores en el municipio de Santa Maria de Pantasma, departamento de Jinotega.  Gracias a la cooperativa Compare fue posible instalar 10 sensores en el municipio de Condega, departamento de Estelí. Y los últimos 10 se instalaron con ayuda de la cooperativa CCAJ en el municipio de Jalapa, departamento de Nueva Segovia.</p>
             <div className='img-container'>
-            <img className='sensor container' src="https://www.fontagro.org/new/uploads/files/Fontagro/Nicaragua%203.JPG" />
+            <img className='sensor container' src={require('../assets/images/nica.png')} />
 
             </div>
             <p>Y finalmente, en Honduras, contando con el acompañamiento de Reyneiro Barahona, consultor líder de la zona. Se realizó el despliegue en cultivos de Maíz, Frijol, aguacate y Sorgo Forrajero, en las comunidades del municipio de San Antonio de Oriente en el departamento de Francisco Morazán.</p>
             <div className='img-container'>
-            <img className='sensor container' src="https://www.fontagro.org/new/uploads/files/Fontagro/Honduras%202.JPG" />
+            <img className='sensor container' src={require('../assets/images/honduras.png')} />
 
             </div>
             <p>La solución tecnológicas, es un dispositivo robusto, de bajo costo y alta usabilidad, que permite medir la humedad del suelo. El dispositivo cuenta con autonomía de carga de hasta seis meses en campo y cuenta con descarga fácil de los datos sin necesidad de conectividad remota. </p>
             <div className='img-container'>
-            <img className='sensor container' src="https://www.fontagro.org/new/uploads/noticias/b85c4234-9fdc-4a37-9487-cb5faff2ee0a.JPG"/>
+            <img className='sensor container' src={require('../assets/images/sensor.jpeg')} />
 
             </div>
             <h4>Herramienta de visualización</h4>
