@@ -76,6 +76,11 @@ transition: all 250ms ease-in-out 0s;
     height: 45px;
     margin-bottom: 10px;
 }
+.logo-ciat{
+    width: 130px;
+    height: 75px;
+    margin-bottom: 10px;
+}
 img{
     color: black;
 }

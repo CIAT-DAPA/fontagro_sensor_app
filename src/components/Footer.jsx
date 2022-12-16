@@ -14,8 +14,8 @@ function Footer() {
                   <span></span>
                 </h5>
                 <a href="https://ciat.cgiar.org/?lang=es" target="_blank"><img
-                  className="logos"
-                  src={require("../assets/images/logo-ciat.png")}
+                  className="logo-ciat"
+                  src={require("../assets/images/Ciat-logo.png")}
                 /></a>
               </div>
             </div>
