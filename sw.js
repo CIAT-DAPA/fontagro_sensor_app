@@ -10,7 +10,7 @@ var urlCache= [
    'https://tufincastats.open-aeps.org/static/media/background-data-user.dba68cb1ca080ea9860a.jpg',
    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
    'https://tufincastats.open-aeps.org/static/css/main.61e56d3b.css',
-   'https://tufincastats.open-aeps.org/static/js/main.41414fcd.js',
+   'https://tufincastats.open-aeps.org/static/js/main.c96f1209.js',
    'https://tufincastats.open-aeps.org/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png',
    'https://tufincastats.open-aeps.org/static/media/ubicaci%C3%B3n.05c360e939642f59feba.png',
    'https://tufincastats.open-aeps.org/static/media/colombia.0a557c5eba997e0e7a74.png',
