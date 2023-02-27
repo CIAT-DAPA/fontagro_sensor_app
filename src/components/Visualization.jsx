@@ -1,4 +1,6 @@
 import { React, useContext, useState } from "react";
+import html2canvas from "html2canvas";
+import JsPDF from "jspdf";
 import "../assets/styles/visualization.css";
 import { DataContext } from "../context/StaticContex";
 import ColorGraphic from "./ColorGraphic";
@@ -62,6 +64,27 @@ function LoadDatatwo() {
     const [showc, setShowc] = useState(false);
     const handleClosec = () => setShowc(false);
     const handleShowc = () => setShowc(true);
+    const createPDF = async () => {
+      let orientacion
+      if (window.screen.width < 1400){
+          //console.log("Pequeña")
+          orientacion = 'p' 
+      }else {
+          //console.log("Grande")
+          orientacion = 'l'
+      }
+
+      let html = document.getElementById('contain')
+      let report = new JsPDF(orientacion,'px',[html.offsetWidth+40,html.offsetHeight+40]);
+      const canvas = await html2canvas(html,{
+          useCORS: true,
+          scale: 1,
+          allowTaint: true,
+      })
+      const img = canvas.toDataURL("image/png");
+      report.addImage(img,'JPEG',10,10, html.offsetWidth, html.offsetHeight);
+      report.save('report.pdf');
+    };
   return (
     <div className="container" id='contain'>
       <>
@@ -88,7 +111,7 @@ function LoadDatatwo() {
             <button onClick={handleShowc}  className="btn btn-primary my-4">Seleciona textura de suelo</button>
 
             </div>
-
+            
         <div className="card shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
             <p className="grafica-titulo">Porcentaje de humedad</p>
@@ -150,6 +173,7 @@ function LoadDatatwo() {
                 rootElementId={"pagetodownload"}
                 DownloadFileName="testPage"
               />
+              <button onClick={createPDF}>descar</button>
             </div>
           </div>
         </div>

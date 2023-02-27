@@ -29,10 +29,10 @@ function ModalCampo({showc, handleClosec}){
             <option className="suelo"  value={'9,4,Arenoso'}>Arenoso</option>
             <option className="suelo" value={'14,6,Franco Arenoso'}>Franco arenoso</option>
             <option className="suelo" value={'22,15,Franca'}>Franca</option>
-            <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco arcilloso</option>
-            <option className="suelo" value={'24,12,Franco Arcillo Arenoso'}>Franco arcillo arenoso</option>
-            <option className="suelo" value={'31,15,Arsillo Arenosa'}>Arsillo Arenosa</option>
-            <option className="suelo" value={'35,17,Arcillosa'}>Arcillosa</option>
+            <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco rcilloso</option>
+            <option className="suelo" value={'24,12,Franco Arcillo Arenoso'}>Franco arcillo renoso</option>
+            <option className="suelo" value={'31,15,Arsillo Arenosa'}>Arcillo arenoso</option>
+            <option className="suelo" value={'35,17,Arcillosa'}>Arcilloso</option>
         </select>     
         </Modal.Body>
         <Modal.Footer>
