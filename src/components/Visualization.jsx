@@ -173,7 +173,7 @@ function LoadDatatwo() {
                 rootElementId={"pagetodownload"}
                 DownloadFileName="testPage"
               />
-              <button onClick={createPDF}>descar</button>
+            {/* <button onClick={createPDF}>descar</button> */}
             </div>
           </div>
         </div>
