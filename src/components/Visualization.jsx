@@ -111,8 +111,8 @@ function LoadDatatwo() {
             <button onClick={handleShowc}  className="btn btn-primary my-4">Seleciona textura de suelo</button>
 
             </div>
-            
-        <div className="card shadow-sm  mb-5 bg-body rounded">
+            <div id="graphics">
+            <div className="card shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
             <p className="grafica-titulo">Porcentaje de humedad</p>
           </div>
@@ -152,8 +152,9 @@ function LoadDatatwo() {
           </div>
           <BoxPlotDias />
         </div>
-       
-      <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
+        <div className="html2pdf__page-break"></div>
+
+        <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
         <p>Tabla de datos en el tiempo</p>
 
@@ -163,14 +164,16 @@ function LoadDatatwo() {
       <ShowTable  />
 
       </div>
+            </div>
+        
+      
         <div className="plots-container">
-          <p></p>
           <div id="chart">
           
 
             <div className="report">
               <DownloadPdf
-                rootElementId={"pagetodownload"}
+                rootElementId={"graphics"}
                 DownloadFileName="testPage"
               />
             {/* <button onClick={createPDF}>descar</button> */}

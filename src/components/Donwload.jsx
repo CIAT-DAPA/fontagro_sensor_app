@@ -9,17 +9,18 @@ function DownloadPdf({rootElementId}){
        
         var opt = {
             
-            margin: -2,
+            margin: 15,
 
             filename: 'Reporte.pdf',
             image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
+            html2canvas: { scale: 2, userCORS:true, allowTaint:true },
             jsPDF: { unit: 'px', format: [1400,window.innerWidth], orientation: 'portrait' },
             
         };
         html2pdf().from(input).set(opt).save();
         
     }
+    
     return(
         
        /*  <button type="button" className="btn btn-secondary">Descargar Reporte</button> */
