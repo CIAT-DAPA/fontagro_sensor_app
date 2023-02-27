@@ -64,27 +64,6 @@ function LoadDatatwo() {
     const [showc, setShowc] = useState(false);
     const handleClosec = () => setShowc(false);
     const handleShowc = () => setShowc(true);
-    const createPDF = async () => {
-      let orientacion
-      if (window.screen.width < 1400){
-          //console.log("Pequeña")
-          orientacion = 'p' 
-      }else {
-          //console.log("Grande")
-          orientacion = 'l'
-      }
-
-      let html = document.getElementById('contain')
-      let report = new JsPDF(orientacion,'px',[html.offsetWidth+40,html.offsetHeight+40]);
-      const canvas = await html2canvas(html,{
-          useCORS: true,
-          scale: 1,
-          allowTaint: true,
-      })
-      const img = canvas.toDataURL("image/png");
-      report.addImage(img,'JPEG',10,10, html.offsetWidth, html.offsetHeight);
-      report.save('report.pdf');
-    };
   return (
     <div className="container" id='contain'>
       <>
@@ -132,6 +111,8 @@ function LoadDatatwo() {
             <ColorGraphic />
             
           </div>
+        <div className="html2pdf__page-break"></div>
+
         </div>
 
        
@@ -152,7 +133,6 @@ function LoadDatatwo() {
           </div>
           <BoxPlotDias />
         </div>
-        <div className="html2pdf__page-break"></div>
 
         <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
         <div className="card-header mb-2">
@@ -173,7 +153,7 @@ function LoadDatatwo() {
 
             <div className="report">
               <DownloadPdf
-                rootElementId={"graphics"}
+                rootElementId={"pagetodownload"}
                 DownloadFileName="testPage"
               />
             {/* <button onClick={createPDF}>descar</button> */}

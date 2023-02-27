@@ -51,7 +51,7 @@ function Footer() {
                 </h5>
                 <a href="https://www.fontagro.org/es/" target="_blank">
                 <img
-                  className="logos"
+                  className="logos-f"
                   src={require("../assets/images/logo-fontagro1.png")}
                 />
                 </a>

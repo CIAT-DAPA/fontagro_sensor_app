@@ -116,7 +116,7 @@ function BoxPlotDias(){
     xaxis: {
       title: {
         text: "Dias Totales",
-      },  
+      }, tickAmount: 15 , 
     },
     annotations: {
       yaxis: [
