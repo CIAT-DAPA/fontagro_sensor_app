@@ -26,13 +26,13 @@ function ModalCampo({showc, handleClosec}){
         <Modal.Body className='body' >
         <select id='select' className="form-select" aria-label="Default select example">
             <option selected>Seleccione un suelo</option>
-            <option className="suelo"  value={'9,4,Arenoso'}>Arenoso</option>
-            <option className="suelo" value={'14,6,Franco Arenoso'}>Franco arenoso</option>
-            <option className="suelo" value={'22,15,Franca'}>Franca</option>
-            <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco arcilloso</option>
-            <option className="suelo" value={'24,12,Franco Arcillo Arenoso'}>Franco arcillo arenoso</option>
-            <option className="suelo" value={'31,15,Arsillo Arenosa'}>Arcillo arenoso</option>
-            <option className="suelo" value={'35,17,Arcillosa'}>Arcilloso</option>
+            <option className="suelo"  value={'9,4,Arenoso'}>Arenoso (A)</option>
+            <option className="suelo" value={'14,6,Franco Arenoso'}>Franco Arenoso (FA)</option>
+            <option className="suelo" value={'22,15,Franco'}>Franco (F)</option>
+            <option className="suelo" value={'27,13,Franco Arcilloso'}>Franco Arcilloso (FAr)</option>
+            <option className="suelo" value={'24,12,Franco Arcillo Arenoso'}>Franco Arcillo Arenoso (FArA)</option>
+            <option className="suelo" value={'31,15,Arcillo Arenoso'}>Arcillo Arenoso (ArA)</option>
+            <option className="suelo" value={'35,17,Arcilloso'}>Arcilloso (Ar)</option>
         </select>     
         </Modal.Body>
         <Modal.Footer>
