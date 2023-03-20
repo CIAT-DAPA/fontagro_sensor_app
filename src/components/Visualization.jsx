@@ -17,7 +17,7 @@ function LoadDatatwo() {
   let infoGeneral = "";
   let infocultivo="";
   let tituloInicio =
-    "En el menu de la parte superior derecha, podrá filtrar datos en un periodo de tiempo especifico e ingresar datos como su nombre y el de su finca.";
+    "En el menu de la parte superior derecha, podrá filtrar datos en un periodo de tiempo especifico, ingresar cultivo asociado e ingresar datos como su nombre y el de su finca.";
   const { contextDatao } = useContext(DataContext);
   const { nombreP } = useContext(DataContext);
   const { finca } = useContext(DataContext);

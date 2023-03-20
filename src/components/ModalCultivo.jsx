@@ -18,7 +18,7 @@ function ModalCultivo({showt, handleCloset}){
         <div className='modal'>
             <Modal  show={showt} onHide={handleCloset}>
         <Modal.Header closeButton>
-          <Modal.Title>Ingrese el cultivo asociado a este senor</Modal.Title>
+          <Modal.Title>Ingrese el cultivo asociado a este sensor</Modal.Title>
         </Modal.Header>
         <Modal.Body className='body' >
             <div>
