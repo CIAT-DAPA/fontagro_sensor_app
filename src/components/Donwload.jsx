@@ -1,9 +1,13 @@
-import React from "react";
+import {React, useContext} from "react";
 import html2canvas from "html2canvas";
 import {jsPDF} from "jspdf";
 import html2pdf from 'html2pdf.js'
+import { DataContext } from "../context/StaticContex";
+
 import '../assets/styles/download.css'
 function DownloadPdf({rootElementId}){
+  const { nombreP } = useContext(DataContext);
+
     const downloadFileDocument= ()=>{
         const input= document.getElementById(rootElementId);
        
@@ -11,7 +15,7 @@ function DownloadPdf({rootElementId}){
             
             margin: 15,
 
-            filename: 'Reporte.pdf',
+            filename: `${nombreP}.pdf`,
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2, userCORS:true, allowTaint:true },
             jsPDF: { unit: 'px', format: [1400,window.innerWidth], orientation: 'portrait' },

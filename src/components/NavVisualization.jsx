@@ -8,11 +8,16 @@ import {Link} from "react-router-dom"
 import ModalData from "./ModalData";
 import ModalDate from "./ModalDate";
 import ModalCampo from "./ModalCampo";
+import ModalCultivo from "./ModalCultivo";
 
 function NavVisualiation(){
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [showt, setShowt] = useState(false);
+    const handleCloset = () => setShowt(false);
+    const handleShowt = () => setShowt(true);
 
     const [showw, setShoww] = useState(false);
     const handleClosee = () => setShoww(false);
@@ -49,6 +54,8 @@ function NavVisualiation(){
                     <Link onClick={handleShow}className="nav-link" to="">Datos de la finca</Link>
                     {/* <Link onClick={handleShowc} className="nav-link" to="">Textura del suelo</Link> */}
                     <Link onClick={handleShoww} className="nav-link" to="">Filtrar datos</Link>
+                    <Link onClick={handleShowt} className="nav-link" to="">Cultivo</Link>
+
                     <Link onClick={handleShowa} className="nav-link" to="">Acerca de</Link>
                   </Nav>
                 </Offcanvas.Body>
@@ -59,6 +66,7 @@ function NavVisualiation(){
         <ModalDate showw={showw} handleClosee={handleClosee} /> 
         <ModalData show={show} handleClose={handleClose} />
         <ModalCampo showc={showc} handleClosec={handleClosec} />
+        <ModalCultivo showt={showt} handleCloset={handleCloset} />
         <ShowAbout showa={showa} handleClosea={handleClosea} />
       </>
     )

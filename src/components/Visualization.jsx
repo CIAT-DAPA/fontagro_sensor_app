@@ -15,6 +15,7 @@ function LoadDatatwo() {
   let nombreFinca = "";
   let periodoDeTiempo = "";
   let infoGeneral = "";
+  let infocultivo="";
   let tituloInicio =
     "En el menu de la parte superior derecha, podrá filtrar datos en un periodo de tiempo especifico e ingresar datos como su nombre y el de su finca.";
   const { contextDatao } = useContext(DataContext);
@@ -23,6 +24,7 @@ function LoadDatatwo() {
   const { json } = useContext(DataContext);
   const { inicio } = useContext(DataContext);
   const { fin } = useContext(DataContext);
+  const { nombreC} = useContext(DataContext);
   const data = localStorage.getItem("datos");
   const datos = JSON.parse(data);
   const fechas = [];
@@ -61,6 +63,7 @@ function LoadDatatwo() {
     : contextDatao[2] != undefined
     ? (infoGeneral = `Infomación general`)
     : (nombreFinca = "");
+  nombreC!=""? (infocultivo= `Cultivo: ${nombreC}`): (infocultivo="");
     const [showc, setShowc] = useState(false);
     const handleClosec = () => setShowc(false);
     const handleShowc = () => setShowc(true);
@@ -77,9 +80,11 @@ function LoadDatatwo() {
           {tituloGeneral && <p className="titulo-general">{tituloGeneral}</p>}
           {nombreFinca && <p className="titulo-general">{nombreFinca}</p>}
           {tituloGrafica && <p className="titulo-grafica">{tituloGrafica} </p>}
+          {infocultivo && <p className="titulo-grafica">{infocultivo} </p>}
           {periodoDeTiempo && (
             <p className="titulo-grafica">{periodoDeTiempo} </p>
           )}
+          <p className="titulo-grafica">{`ID de sensor: ${datos.data[1].VISUALITI}`}</p>
         </div>
         <div className="card card-body shadow-sm  mb-5 bg-body rounded">
               <p>
