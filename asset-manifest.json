@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3c5029eb.css",
-    "main.js": "/static/js/main.81ffde22.js",
+    "main.js": "/static/js/main.3c34cd59.js",
     "static/js/703.2c952b5b.chunk.js": "/static/js/703.2c952b5b.chunk.js",
     "static/js/27.a2029c88.chunk.js": "/static/js/27.a2029c88.chunk.js",
     "static/media/nica.png": "/static/media/nica.7c6eb28b77a68ad354e0.png",
@@ -15,12 +15,12 @@
     "static/media/logo-fontagro1.png": "/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
     "index.html": "/index.html",
     "main.3c5029eb.css.map": "/static/css/main.3c5029eb.css.map",
-    "main.81ffde22.js.map": "/static/js/main.81ffde22.js.map",
+    "main.3c34cd59.js.map": "/static/js/main.3c34cd59.js.map",
     "703.2c952b5b.chunk.js.map": "/static/js/703.2c952b5b.chunk.js.map",
     "27.a2029c88.chunk.js.map": "/static/js/27.a2029c88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c5029eb.css",
-    "static/js/main.81ffde22.js"
+    "static/js/main.3c34cd59.js"
   ]
 }
