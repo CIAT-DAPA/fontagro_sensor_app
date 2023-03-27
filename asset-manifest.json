@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c5029eb.css",
-    "main.js": "/static/js/main.3c34cd59.js",
+    "main.css": "/static/css/main.8583453c.css",
+    "main.js": "/static/js/main.d8fa2246.js",
     "static/js/703.2c952b5b.chunk.js": "/static/js/703.2c952b5b.chunk.js",
     "static/js/27.a2029c88.chunk.js": "/static/js/27.a2029c88.chunk.js",
+    "static/media/fondo2.0.png": "/static/media/fondo2.0.6262208ee7b794124138.png",
     "static/media/nica.png": "/static/media/nica.7c6eb28b77a68ad354e0.png",
     "static/media/ubicación.png": "/static/media/ubicación.05c360e939642f59feba.png",
     "static/media/colombia.png": "/static/media/colombia.0a557c5eba997e0e7a74.png",
-    "static/media/background-data-user.jpg": "/static/media/background-data-user.dba68cb1ca080ea9860a.jpg",
     "static/media/logo-visualiti.png": "/static/media/logo-visualiti.c86e53ae15dea7aab9cf.png",
     "static/media/honduras.png": "/static/media/honduras.babd8cb8d2770b8994de.png",
     "static/media/sensor.jpeg": "/static/media/sensor.dc6d14c071e6de1f165a.jpeg",
     "static/media/Ciat-logo.png": "/static/media/Ciat-logo.b0acafbbbf3c040756aa.png",
     "static/media/logo-fontagro1.png": "/static/media/logo-fontagro1.42a941919fbc6a9f7cae.png",
     "index.html": "/index.html",
-    "main.3c5029eb.css.map": "/static/css/main.3c5029eb.css.map",
-    "main.3c34cd59.js.map": "/static/js/main.3c34cd59.js.map",
+    "main.8583453c.css.map": "/static/css/main.8583453c.css.map",
+    "main.d8fa2246.js.map": "/static/js/main.d8fa2246.js.map",
     "703.2c952b5b.chunk.js.map": "/static/js/703.2c952b5b.chunk.js.map",
     "27.a2029c88.chunk.js.map": "/static/js/27.a2029c88.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c5029eb.css",
-    "static/js/main.3c34cd59.js"
+    "static/css/main.8583453c.css",
+    "static/js/main.d8fa2246.js"
   ]
 }
