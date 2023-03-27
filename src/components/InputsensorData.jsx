@@ -36,8 +36,9 @@ const {json, setJson} = useContext(DataContext);
                     <input type="file" className="form-control" id="inputdata" accept=".csv" /* onChange={handleChange} *//>     
                 </div>
                 <div className="buttons-container">
-               
-                <Link type="button" className="btn btn-primary btn-lg px-4 text-white mt-5" to="/visualization">Continuar <FontAwesomeIcon icon={faArrowRight} /></Link>
+
+                <button onClick={valores} className="btns btn-aceptar "><Link to="/visualization" >Continuar </Link></button>
+               {/*  <Link type="button" onClick={valores} className="btn btn-primary btn-lg px-4 text-white mt-5" to="/visualization">Continuar <FontAwesomeIcon icon={faArrowRight} /></Link> */}
 
                 </div>  
                     
