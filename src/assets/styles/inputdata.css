@@ -30,7 +30,8 @@
     height: 65vh;
     margin: 0 auto;
     width: 100%;
-    background-image: url('../images/background-data-user.jpg');
+    /* background-image: url('../images/fondo2.0.png'); */
+    background-image: linear-gradient( to bottom, rgba(15, 15, 15, 0.5), rgba(11, 11, 11, 0.5) ), url("../images/fondo2.0.png");
     background-size: cover;
     border-bottom: 1px solid gray;
     overflow: hidden;

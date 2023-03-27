@@ -8,6 +8,7 @@ import DownloadPdf from "./Donwload";
 import ShowTable from "./Table";
 import BoxPlotDias from "./BoxPlotDias";
 import ModalCampo from "./ModalCampo";
+
 function LoadDatatwo() {
     
   let tituloGrafica = "";
