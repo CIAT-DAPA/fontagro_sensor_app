@@ -73,6 +73,8 @@ function LoadDatatwo() {
       <>
         <div className="card mb-4 shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
+          <p className="tramp"></p>
+
             <p className="info-general">{infoGeneral}</p>
 
           </div>

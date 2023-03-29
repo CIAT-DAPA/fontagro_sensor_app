@@ -33,6 +33,7 @@ function ColorGraphic(){
       height: 300,
       type: "line",
     },
+    
     dataLabels: {
       enabled: false,
     },
@@ -41,6 +42,7 @@ function ColorGraphic(){
     },
     xaxis: {
       title: {
+        
         text: "Fechas",
       },
 
@@ -51,6 +53,7 @@ function ColorGraphic(){
       text: '',
       align: "left",
     },
+    
 
     tooltip: {
       x: {
@@ -59,13 +62,21 @@ function ColorGraphic(){
     },
 
     yaxis: [
-      {
+      { 
+        labels:{
+          style: {
+            fontSize: '16px',
+          },
+        },
         title: {
           text: "Porcentaje de Humedad (%)",
         },
         max: Math.max(...porcentaje)+15,
         min: 0,
-      },
+        
+      }
+      ,
+      
     ],
 
     annotations: {

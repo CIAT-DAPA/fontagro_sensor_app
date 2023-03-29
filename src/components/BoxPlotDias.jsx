@@ -106,6 +106,11 @@ function BoxPlotDias(){
     },
     yaxis: [
       {
+        labels:{
+          style: {
+            fontSize: '14px',
+          },
+        },
         title: {
           text: "Porcentaje de humedad (%)",
         },
