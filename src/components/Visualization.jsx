@@ -76,6 +76,7 @@ function LoadDatatwo() {
             <p className="info-general">{infoGeneral}</p>
 
           </div>
+          <p className="tramp"></p>
           <p className="info">{tituloInicio}</p>
           
           {tituloGeneral && <p className="titulo-general">{tituloGeneral}</p>}
@@ -88,6 +89,7 @@ function LoadDatatwo() {
           <p className="titulo-grafica">{`ID de sensor: ${datos.data[1].VISUALITI}`}</p>
         </div>
         <div className="card card-body shadow-sm  mb-5 bg-body rounded">
+          <p className="tramp"></p>
               <p>
                 En la primer grafica puede observar  el comportamiento de humedad de su finca en el tiempo que estuvo instalado el sensor, en la segunda grafica podrá observar las estadisticas de todos los dias en los que el sensor estuvo instalado.
                 Por ultimo encontrará una tabla con estos datos expresados en filas y columnas para una mejor interpretación, todas las graficas y la tabla serán actualizadas de manera dinamica en función a las fechas que filtre.
@@ -99,9 +101,13 @@ function LoadDatatwo() {
             <div id="graphics">
             <div className="card shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
+          <p className="tramp"></p>
+            
             <p className="grafica-titulo">Porcentaje de humedad</p>
           </div>
           <div className="">
+          <p className="tramp"></p>
+            
             <p className="info">
               En la siguiente grafica puede observar la información sobre la
               humedad del suelo obtenida por el sensor
@@ -124,8 +130,10 @@ function LoadDatatwo() {
        
         <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
           <div className="card-header mb-2">
+          <p className="tramp"></p>
             <p className="">Variabilidad del porcentaje de humedad</p>
           </div>
+          <p className="tramp"></p>
           <p className="boxplot-text">
             En la siguiene grafica puede ver las estadisticas de humedad de
             suelo en los dias que estuvo instalado el sensor
@@ -141,11 +149,11 @@ function LoadDatatwo() {
         </div>
 
         <div className="grafica-titulo card  mt-4 shadow-sm  mb-5 bg-body rounded">
-        <div className="card-header mb-2">
+       {/*  <div className="card-header mb-2">
         <p>Tabla de datos en el tiempo</p>
 
-        </div>
-        <p className="boxplot-text">En la siguiene tabla puede ver las estadisticas de humedad</p>
+        </div> */}
+        {/* <p className="boxplot-text">En la siguiene tabla puede ver las estadisticas de humedad</p> */}
         
       <ShowTable  />
 

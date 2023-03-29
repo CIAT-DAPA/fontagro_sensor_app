@@ -85,6 +85,7 @@ const { inicio } = useContext(DataContext);
         <div className="table-responsive">
             <Table id="hi" striped  >
             <thead>
+              <p className="jeje"></p>
         <tr>
           <th>Fechas</th>
           <th>Mínimo</th>
