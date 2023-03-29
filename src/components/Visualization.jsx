@@ -103,7 +103,7 @@ function LoadDatatwo() {
           <div className="card-header mb-2">
           <p className="tramp"></p>
             
-            <p className="grafica-titulo">Porcentaje de humedad</p>
+            <p className="grafica-titulo">Porcentaje de humedad </p>
           </div>
           <div className="">
           <p className="tramp"></p>
