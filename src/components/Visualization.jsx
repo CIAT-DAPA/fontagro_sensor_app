@@ -49,7 +49,7 @@ function LoadDatatwo() {
     tituloGrafica = "";
   }
   if (nombreP != "") {
-    tituloGeneral = `Nombre del productor :  ${nombreP}`;
+    tituloGeneral = `Nombre del Productor :  ${nombreP}`;
     tituloInicio = "";
   } else {
     tituloGeneral = "";
