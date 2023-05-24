@@ -8,7 +8,7 @@ function ShowAbout({showa, handleClosea}){
         <div className='modal'>
             <Modal  show={showa} onHide={handleClosea}>
         <Modal.Header closeButton>
-          <Modal.Title>Acerca del proyecto</Modal.Title>
+          <Modal.Title>Acerca del Proyecto</Modal.Title>
         </Modal.Header>
         <Modal.Body className='body' >
             <h4>Digitalización de la agricultura de pequeña escala</h4>
