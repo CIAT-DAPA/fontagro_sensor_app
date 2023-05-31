@@ -11,7 +11,7 @@ function ShowAbout({showa, handleClosea}){
           <Modal.Title>Acerca del Proyecto</Modal.Title>
         </Modal.Header>
         <Modal.Body className='body' >
-            <h4>Digitalización de la agricultura de pequeña escala</h4>
+            <h4>Digitalización de la Agricultura de pequeña escala</h4>
             <p className='about-text'>Después de un proceso de diseño participativo, utilizando la metodología de visualización creativa, y luego de la prueba en campo de tres prototipos de solución tecnológica, el proyecto ya cuenta con un diseño de dispositivo para medir humedad de suelo, robusto, de alta usabilidad y bajo costo. El diseño seleccionado cuenta con múltiples mejoras con respecto a los prototipos, manteniendo una autonomía de carga de hasta seis meses en campo, con encendido automático al conectar el sensor, mayor robustez, diseño más elegante y mayor facilidad de descarga de datos y carga del dispositivo. De este sensor se han hecho 90 réplicas, que están instaladas en cultivos de de productores de la región en los paises de, Colombia, Honduras y Nicaragua. </p>
             <div className='img-container'>
             <img className='sensor container' src={require('../assets/images/ubicación.png')} />
